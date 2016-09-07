@@ -33,8 +33,11 @@ class EpisodeOfCareCareTeam(models.Model):
     _description = "Episode Of Care Care Team"        
 
     episode_of_care_id = fields.Many2one(comodel_name="hc.res.episode.of.care", string="Episode Of Care", required="True", help="Episode of care associated with this care team.")                
-    member_type = fields.Selection(string="Member Type", required="True", selection=[("practitioner", "Practitioner"), ("organization", "Organization")], help="Type of practitioner (or Organization) within the team.")                
-    member_name = fields.Char(string="Member Name", compute="compute_member_name", help="The practitioner (or Organization) within the tea.")                
+    member_type = fields.Selection(
+        string="Member Type", 
+        selection=[
+        ("practitioner", "Practitioner"), ("organization", "Organization")], help="Type of practitioner (or Organization) within the team.")                
+    member_name = fields.Char(string="Member", compute="compute_member_name", help="The practitioner (or Organization) within the tea.")                
     member_practitioner_id = fields.Many2one(comodel_name="hc.res.practitioner", string="Member Practitioner", help="Practitioner the practitioner (or organization) within the team.")                
     member_organization_id = fields.Many2one(comodel_name="hc.res.organization", string="Member Organization", help="Organization the practitioner (or organization) within the team.")                
     role_ids = fields.One2many(comodel_name="hc.episode.of.care.care.team.role", inverse_name="participant_role_id", string="Roles", help="The role that this team member is taking within this episode of care.")                
@@ -53,8 +56,15 @@ class EpisodeOfCareCondition(models.Model):
     _description = "Episode Of Care Condition"        
     _inherit = ["hc.basic.association"]
 
-    episode_of_care_id = fields.Many2one(comodel_name="hc.res.episode.of.care", string="Episode Of Care", required="True", help="Episode of care associated with this episode of care condition.")                
-    condition_id = fields.Many2one(comodel_name="hc.res.condition", string="Condition", help="Condition associated with this episode of care condition.")                
+    episode_of_care_id = fields.Many2one(
+        comodel_name="hc.res.episode.of.care", 
+        string="Episode Of Care", 
+        required="True", 
+        help="Episode of care associated with this episode of care condition.")                
+    # condition_id = fields.Many2one(
+    #     comodel_name="hc.res.condition", 
+    #     string="Condition", 
+    #     help="Condition associated with this episode of care condition.")                
 
 class EpisodeOfCareReferralRequest(models.Model):    
     _name = "hc.episode.of.care.referral.request"    
@@ -89,16 +99,18 @@ class EpisodeOfCareCareTeamRole(models.Model):
     _description = "Episode Of Care Care Team Role"        
     _inherit = ["hc.basic.association"]
 
-    episode_of_care_care_team_id = fields.Many2one(comodel_name="hc.episode.of.care.care.team", string="Episode Of Care", required="True", help="Care Team member associated with this care team role.")                
-    participant_role_id = fields.Many2one(comodel_name="hc.vs.participant.role", string="Participant Role", required="True", help="Participant role associated with this care team member.")                
+    episode_of_care_care_team_id = fields.Many2one(
+        comodel_name="hc.episode.of.care.care.team", 
+        string="Episode Of Care", 
+        required="True", 
+        help="Care Team member associated with this care team role.")                
+    participant_role_id = fields.Many2one(
+        comodel_name="hc.vs.participant.role", 
+        string="Participant Role", 
+        required="True", 
+        help="Participant role associated with this care team member.")                
 
 class EpisodeOfCareType(models.Model):    
     _name = "hc.vs.episode.of.care.type"    
     _description = "Episode Of Care Type"        
     _inherit = ["hc.value.set.contains"]
-
-class ParticipantRole(models.Model):    
-    _name = "hc.vs.participant.role"    
-    _description = "Participant Role"       
-    _inherit = ["hc.value.set.contains"]
-

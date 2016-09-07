@@ -44,7 +44,7 @@ class TimingRepeat(models.Model):
             ("period", "Period")], 
         help="Type of bounds.")       
     bounds_name = fields.Char(
-        string="Bounds Name", 
+        string="Bounds", 
         compute="compute_bounds_name", 
         help="Length/Range of lengths, or (Start and/or end) limit.")        
     bounds_duration = fields.Float(
@@ -120,8 +120,9 @@ class TimingRepeat(models.Model):
             ("a", "A")], 
         help="Unit of time (UCUM)")       
     when_id = fields.Many2one(
+        comodel_name="hc.vs.event.timing", 
         string="When", 
-        help="Regular life events the event is tied to.")      
+        help="Regular life events the event is tied to.")    
     offset = fields.Integer(
         string="Offset", 
         help="Minutes from event (before or after).")                      

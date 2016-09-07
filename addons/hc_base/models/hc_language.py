@@ -20,8 +20,12 @@ class Language(models.Model):
 class lang(models.Model):
     _inherit = ["res.lang"]
 
+<<<<<<< HEAD
     iso3_code_id = fields.Many2one(
         comodel_name="hc.vs.language.iso3.code", 
+=======
+    iso3_code = fields.Char(
+>>>>>>> upstream/master
         string="ISO3 code",
         help="A 3-character representation of the ISO language code.")
     country_id = fields.Many2one(
@@ -70,6 +74,7 @@ class LanguageProficiency(models.Model):
 class LanguageSkill(models.Model): 
     _name = "hc.vs.language.skill"   
     _description = "Language Skill"
+<<<<<<< HEAD
     _inherit = ["hc.value.set.contains"]
 
     parent_id = fields.Many2one(
@@ -92,3 +97,6 @@ class LanguageSkill(models.Model):
 #         string="Country", 
 #         help="Country that the ISO language belongs to.")
 
+=======
+    _inherit = ["hc.value.set.contains"]
+>>>>>>> upstream/master

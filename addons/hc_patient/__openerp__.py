@@ -36,7 +36,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['hc_person'],
+    'depends': ['hc_practitioner', 'hc_related_person'],
 
 
     # always loaded
@@ -49,4 +49,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': 'True',
+    'auto-install': 'True',
 }

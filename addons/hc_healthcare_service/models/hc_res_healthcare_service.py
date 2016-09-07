@@ -201,28 +201,19 @@ class HealthcareServicePhoto(models.Model):
 class HealthcareServiceTelecom(models.Model):   
     _name = "hc.healthcare.service.telecom" 
     _description = "Healthcare Service Telecom"     
-    _inherit = ["hc.basic.association"] 
+    _inherit = ["hc.telecom.contact.point"] 
     _inherits = {"hc.telecom": "telecom_id"}
 
     telecom_id = fields.Many2one(
         comodel_name="hc.telecom", 
         string="Telecom",
-        required=True, 
+        required="True", 
         ondelete="restrict", 
         help="Telecom contact point associated with this healthcare service.")                    
     healthcare_service_id = fields.Many2one(
         comodel_name="hc.res.healthcare.service", 
         string="Healthcare Service", 
         help="Healthcare service which is associated with this telecom contact point.")                  
-    use = fields.Selection(
-        string="Telecom Use", 
-        selection=[
-            ("home", "Home"), 
-            ("work", "Work"), 
-            ("temp", "Temp"),                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            ("old", "Old"),
-            ("mobile", "Mobile")], 
-        help="Purpose of this telecom contact point.")
 
 class HealthcareServiceProgramName(models.Model):  
     _name = "hc.healthcare.service.program.name"    
@@ -259,7 +250,7 @@ class HealthcareServiceLocation(models.Model):
     location_id = fields.Many2one(
         comodel_name="hc.res.location", 
         string="Location",
-        required=True, 
+        required="True", 
         ondelete="restrict", 
         help="Location which is associated with this location.")                    
     healthcare_service_id = fields.Many2one(
@@ -290,7 +281,7 @@ class HealthcareServiceCoverageArea(models.Model):
     location_id = fields.Many2one(
         comodel_name="hc.res.location", 
         string="Location",
-        required=True, 
+        required="True", 
         ondelete="restrict", 
         help="Coverage area which is associated with this healthcare service.") 
     healthcare_service_id = fields.Many2one(

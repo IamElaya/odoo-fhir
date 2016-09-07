@@ -28,12 +28,14 @@ class AllergyIntolerance(models.Model):
             ("resolved", "Resolved"), 
             ("refuted", "Refuted"), 
             ("entered-in-error", "Entered in Error")], 
+        default="active",
         help="Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified Substance.")                    
     type = fields.Selection(
         string="Type", 
         selection=[
             ("allergy", "Allergy"), 
-            ("intolerance", "Intolerance")], 
+            ("intolerance", "Intolerance")],
+        default="allergy", 
         help="Identification of the underlying physiological mechanism for a Reaction Risk.")                    
     category = fields.Selection(
         string="Category", 
@@ -56,12 +58,12 @@ class AllergyIntolerance(models.Model):
     substance_id = fields.Many2one(
         comodel_name="hc.vs.allergy.intolerance.substance.code", 
         string="Substance", 
-        required=True, 
+        required="True", 
         help="Type of the substance and Negation codes for reporting no known allergies.")                    
     patient_id = fields.Many2one(
         comodel_name="hc.res.patient", 
         string="Patient", 
-        required=True, 
+        required="True", 
         help="Patient who the sensitivity is for.")                    
     recorded_date = fields.Datetime(
         string="Recorded Date", 
@@ -162,7 +164,7 @@ class AllergyIntoleranceReaction(models.Model):
     allergy_intolerance_id = fields.Many2one(
         comodel_name="hc.res.allergy.intolerance", 
         string="Allergy Intolerance", 
-        required=True, 
+        required="True", 
         help="Allergy intolerance.")                   
     substance_id = fields.Many2one(
         comodel_name="hc.vs.substance.code", 
@@ -178,7 +180,7 @@ class AllergyIntoleranceReaction(models.Model):
     manifestation_ids = fields.Many2many(
         comodel_name="hc.vs.manifestation.code",
         string="Manifestations", 
-        required=True, 
+        required="True", 
         help="Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event.")
     description = fields.Text(
         string="Description", 
@@ -190,7 +192,7 @@ class AllergyIntoleranceReaction(models.Model):
         string="Duration", 
         help="How long Manifestations persisted.")
     duration_uom_id = fields.Many2one(
-        comodel_name="product.uom", 
+        comodel_name="hc.vs.uom", 
         string="Duration UOM", 
         help="How long Manifestations persisted unit of measure.")            
     severity = fields.Selection(

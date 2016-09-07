@@ -10,7 +10,8 @@
         An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) 
         or assessing the health status of a patient.
 
-        **Scope and Usage** 
+        **Scope and Usage**
+
         A patient encounter is further characterized by the setting in which it takes place. 
         Amongst them are ambulatory, emergency, home health, inpatient and virtual encounters. 
         An Encounter encompasses the lifecycle from pre-admission, the actual encounter (for ambulatory encounters), 
@@ -20,7 +21,7 @@
     """,
 
     'author': "Luigi Sison",
-    'website': "http://www.yourcompany.com",
+    'website': "https://hl7-fhir.github.io/encounter.html",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
@@ -29,7 +30,8 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['hc_related_person', 'hc_organization', 'hc_account', 'hc_location', 'hc_episode_of_care'],
+    # 'depends': ['hc_appointment']
+    'depends': ['hc_account', 'hc_condition'],
 
     # always loaded
     'data': [
@@ -41,4 +43,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': 'True',
+    'auto-install': 'True',
 }

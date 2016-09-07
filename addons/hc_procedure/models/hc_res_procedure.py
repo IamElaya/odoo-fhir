@@ -23,7 +23,7 @@ class Procedure(models.Model):
             ("group", "Group")], 
         help="Type of subject the procedure was performed on.")                    
     subject_name = fields.Char(
-        string="Subject Name",
+        string="Subject",
         required="True", 
         compute="compute_subject_name",  
         help="Who the procedure was performed on.")
@@ -70,7 +70,7 @@ class Procedure(models.Model):
         string="Reason References", 
         help="Condition that is the reason the procedure performed.")                 
     reason_code_id = fields.Many2one(
-        comodel_name="hc.vs.procedure.reason.code", 
+        comodel_name="hc.vs.procedure.reason", 
         string="Reason Code", 
         help="Coded reason procedure performed.")                    
     performed_date_type = fields.Selection(
@@ -92,10 +92,10 @@ class Procedure(models.Model):
     #     comodel_name="hc.res.encounter", 
     #     string="Encounter", 
     #     help="The encounter associated with the procedure.")                    
-    # location_id = fields.Many2one(
-    #     comodel_name="hc.res.location", 
-    #     string="Location", 
-    #     help="Where the procedure happened.")                  
+    location_id = fields.Many2one(
+        comodel_name="hc.res.location", 
+        string="Location", 
+        help="Where the procedure happened.")                  
     outcome_id = fields.Many2one(
         comodel_name="hc.vs.procedure.outcome", 
         string="Outcome", 
@@ -106,25 +106,25 @@ class Procedure(models.Model):
         string="Report Diagnostic Reports", 
         help="Any report resulting from the procedure.")                 
     complication_ids = fields.Many2many(
-        comodel_name="hc.vs.condition.code", 
+        comodel_name="hc.procedure.complication", 
         string="Complications", 
         help="Complication following the procedure.")                  
     follow_up_ids = fields.Many2many(
         comodel_name="hc.vs.procedure.follow.up", 
         string="Follow Ups", 
         help="Instructions for follow up.")                 
-    # request_type = fields.Selection(
-    #     string="Procedure Request Type", 
-    #     selection=[
-    #         ("care plan", "Care Plan"), 
-    #         ("diagnostic order", "Diagnostic Order"),
-    #         ("procedure request", "Procedure Request"),
-    #         ("referral request", "Referral Request")], 
-    #     help="Type of request for this procedure.")                  
-    # request_name = fields.Char(
-    #     string="Request Name", 
-    #     compute="compute_request_name",
-    #     help="Request reference for this procedure.")                    
+    request_type = fields.Selection(
+        string="Procedure Request Type", 
+        selection=[
+            ("care plan", "Care Plan"), 
+            ("diagnostic order", "Diagnostic Order"),
+            ("procedure request", "Procedure Request"),
+            ("referral request", "Referral Request")], 
+        help="Type of request for this procedure.")                  
+    request_name = fields.Char(
+        string="Request", 
+        compute="compute_request_name",
+        help="Request reference for this procedure.")                    
     # request_care_plan_id = fields.Many2one(
     #     comodel_name="hc.res.care.plan", 
     #     string="Request Care Plan", 
@@ -159,12 +159,7 @@ class Procedure(models.Model):
         comodel_name="hc.procedure.component", 
         inverse_name="procedure_id", 
         string="Components", 
-        help="Events related to the procedure.")                   
-    # related_item_ids = fields.One2many(
-    #     comodel_name="hc.procedure.related.item", 
-    #     inverse_name="procedure_id", 
-    #     string="Related Items", 
-    #     help="A procedure that is related to this one.")                  
+        help="Events related to the procedure.")                                   
     performer_ids = fields.One2many(
         comodel_name="hc.procedure.performer", 
         inverse_name="procedure_id", 
@@ -205,29 +200,29 @@ class ProcedureUsedReference(models.Model):
         comodel_name="hc.res.procedure", 
         string="Procedure", 
         help="Procedure associated with this procedure used reference.")                   
-    # used_reference_type = fields.Selection(
-    #     string="Used Reference Type", 
-    #     selection=[
-    #         ("Device", "Device"), 
-    #         ("Medication", "Medication"), 
-    #         ("Substance", "Substance")], 
-    #     help="Type of item used during the procedure")                 
-    # used_reference_name = fields.Char(
-    #     string="Used Reference Name", 
-    #     compute="compute_used_reference_name",
-    #     help="The name of the item used during the procedure.")                   
-    # used_reference_device_id = fields.Many2one(
-    #     comodel_name="hc.res.device", 
-    #     string="Used Reference Device", 
-    #     help="Device item used during procedure.")                    
-    # used_reference_medication_id = fields.Many2one(
-    #     comodel_name="hc.res.medication", 
-    #     string="Used Reference Medication", 
-    #     help="Medication item used during procedure.")                 
-    # used_reference_substance_id = fields.Many2one(
-    #     comodel_name="hc.res.substance", 
-    #     string="Used Reference Substance", 
-    #     help="Substance item used during procedure.")
+    used_reference_type = fields.Selection(
+        string="Used Reference Type", 
+        selection=[
+            ("Device", "Device"), 
+            ("Medication", "Medication"), 
+            ("Substance", "Substance")], 
+        help="Type of item used during the procedure")                 
+    used_reference_name = fields.Char(
+        string="Used Reference", 
+        compute="compute_used_reference_name",
+        help="The name of the item used during the procedure.")                   
+    used_reference_device_id = fields.Many2one(
+        comodel_name="hc.res.device", 
+        string="Used Reference Device", 
+        help="Device item used during procedure.")                    
+    used_reference_medication_id = fields.Many2one(
+        comodel_name="hc.res.medication", 
+        string="Used Reference Medication", 
+        help="Medication item used during procedure.")                 
+    used_reference_substance_id = fields.Many2one(
+        comodel_name="hc.res.substance", 
+        string="Used Reference Substance", 
+        help="Substance item used during procedure.")
 
     # @api.multi          
     # def compute_used_reference_name(self):          
@@ -248,25 +243,25 @@ class ProcedureComponent(models.Model):
         comodel_name="hc.res.procedure", 
         string="Procedure", 
         help="Procedure associated with this procedure component.")                    
-    # component_type = fields.Selection(
-    #     string="Component Type", 
-    #     selection=[
-    #         ("Medication Administration", "Medication Administration"), 
-    #         ("Procedure", "Procedure"), 
-    #         ("Observation", "Observation")], 
-    #     help="Type of item used during the procedure")                   
-    # component_name = fields.Char(
-    #     string="Component Name", 
-    #     compute="compute_component_name",
-    #     help="The name of the event related to the procedure.")                  
+    component_type = fields.Selection(
+        string="Component Type", 
+        selection=[
+            ("Medication Administration", "Medication Administration"), 
+            ("Procedure", "Procedure"), 
+            ("Observation", "Observation")], 
+        help="Type of item used during the procedure")                   
+    component_name = fields.Char(
+        string="Component", 
+        compute="compute_component_name",
+        help="The name of the event related to the procedure.")                  
     # component_medication_administration_id = fields.Many2one(
     #     comodel_name="hc.res.medication.administration", 
     #     string="Component Medication Administration", 
     #     help="Medication Administration event related to the procedure .")                  
-    # component_procedure_id = fields.Many2one(
-    #     comodel_name="hc.res.procedure", 
-    #     string="Component Procedure", 
-    #     help="Procedure event related to the procedure .")                  
+    component_procedure_id = fields.Many2one(
+        comodel_name="hc.res.procedure", 
+        string="Component Procedure", 
+        help="Procedure event related to the procedure .")                  
     # component_observation_id = fields.Many2one(
     #     comodel_name="hc.res.observation", 
     #     string="Component Observation", 
@@ -299,7 +294,7 @@ class ProcedurePerformer(models.Model):
             ("related person", "Related Person")], 
         help="Type of practitioner who was involved in the procedure.") 
     actor_name = fields.Char(
-        string="Actor Name", 
+        string="Actor", 
         compute="compute_actor_name",
         help="The name of the entity who performs the procedure.")                                   
     actor_practitioner_id = fields.Many2one(
@@ -347,100 +342,11 @@ class ProcedureFocalDevice(models.Model):
         comodel_name="hc.vs.device.action", 
         string="Action", 
         help="Kind of change to device.")                  
-    # manipulated_ids = fields.Many2one(
-    #     comodel_name="hc.res.device", 
-    #     string="Manipulated", 
-    #     required="True", 
-    #     help="Device that was changed.")                 
-
-# class ProcedureRelatedItem(models.Model):   
-#     _name = "hc.procedure.related.item" 
-#     _description = "Procedure Related Item"         
-    
-#     procedure_id = fields.Many2one(
-#         comodel_name="hc.res.procedure", 
-#         string="Procedure", 
-#         required="True", 
-#         help="Procedure associated with this related item.")                   
-#     type = fields.Selection(
-#         string="Related Item Type", 
-#         selection=[
-#             ("caused-by", "Caused-By"), 
-#             ("because-of", "Because-Of")], 
-#         help="Type of related item.")                 
-#     target_type = fields.Selection(
-#         string="Related Item Target Type", 
-#         selection=[
-#             ("allergy intolerance", "Allergy Intolerance"), 
-#             ("care plan", "Care Plan"),
-#             ("condition", "Condition"),
-#             ("diagnostic report", "Diagnostic Report"),
-#             ("family member history", "Family Member History"),
-#             ("imaging study", "Imaging Study"),("immunization", "Immunization"), 
-#             ("immunization recommendation", "Immunization Recommendation"),
-#             ("medication administration", "Medication Administration"),
-#             ("medication dispense", "Medication Dispense"),
-#             ("medication prescription", "Medication Prescription"),
-#             ("medication statement", "Medication Statement"),
-#             ("observation", "Observation"),
-#             ("procedure", "Procedure")], 
-#         help="Type of related item.")                    
-#     target_allergy_intolerance_id = fields.Many2one(
-#         comodel_name="hc.res.allergy.intolerance", 
-#         string="Target Allergy Intolerance", 
-#         help="Allergy Intolerance related item.")                   
-#     target_care_plan_id = fields.Many2one(
-#         comodel_name="hc.res.care.plan", 
-#         string="Target Care Plan", 
-#         help="Care Plan related item.")                   
-#     target_condition_id = fields.Many2one(
-#         comodel_name="hc.res.condition", 
-#         string="Target Condition", 
-#         help="Condition related item.")                   
-#     target_diagnostic_report_id = fields.Many2one(
-#         comodel_name="hc.res.diagnostic.report", 
-#         string="Target Diagnostic Report", 
-#         help="Diagnostic Report related item.")                   
-#     target_family_member_history_id = fields.Many2one(
-#         comodel_name="hc.res.family.member.history", 
-#         string="Target Family Member History", 
-#         help="Family Member history related item.")                   
-#     target_imaging_study_id = fields.Many2one(
-#         comodel_name="hc.res.imaging.study", 
-#         string="Target Imaging Study", 
-#         help="Imaging Study related item.")                   
-#     target_immunization_id = fields.Many2one(
-#         comodel_name="hc.res.immunization", 
-#         string="Target Immunization", 
-#         help="Immunization related item.")                   
-#     target_immunization_recommendation_id = fields.Many2one(
-#         comodel_name="hc.res.immunization.recommendation", 
-#         string="Target Immunization Recommendation", 
-#         help="Immunization Recommendation related item.")                   
-#     target_medication_admnistration_id = fields.Many2one(
-#         comodel_name="hc.res.medication.administration", 
-#         string="Target Medication Admnistration", 
-#         help="Medication Administration related item.")                 
-#     target_medication_dispense_id = fields.Many2one(
-#         comodel_name="hc.res.medication.dispense", 
-#         string="Target Medication Dispense", 
-#         help="Medication Dispense related item.")                   
-#     target_medication_order_id = fields.Many2one(
-#         comodel_name="hc.res.medication.order", 
-#         string="Target Medication Order", 
-#         help="Medication Order related item.")                   
-#     target_medication_statement_id = fields.Many2one(
-#         comodel_name="hc.res.medication.statement", 
-#         string="Target Medication Statement", 
-#         help="Medication Statement related item.")                   
-#     target_observation_id = fields.Many2one(
-#         comodel_name="hc.res.observation", 
-#         string="Target Observation", 
-#         help="Observation related item.")                   
-#     target_procedure_id = fields.Many2one(
-#         comodel_name="hc.res.procedure", 
-#         string="Target Procedure", 
-#         help="Procedure related item.")                   
+    manipulated_ids = fields.Many2one(
+        comodel_name="hc.res.device", 
+        string="Manipulated", 
+        required="True", 
+        help="Device that was changed.")                  
 
 class ProcedureBodySite(models.Model):  
     _name = "hc.procedure.body.site"    
@@ -451,10 +357,10 @@ class ProcedureBodySite(models.Model):
         comodel_name="hc.res.procedure", 
         string="Procedure", 
         help="Procedure performed on this Body Site.")                  
-    # body_site_id = fields.Many2one(
-    #     comodel_name="hc.res.body.site", 
-    #     string="Body Site", 
-    #     help="Body Site performed with this Procedure.")                    
+    body_site_id = fields.Many2one(
+        comodel_name="hc.res.body.site", 
+        string="Body Site", 
+        help="Body Site performed with this Procedure.")                    
 
 class ProcedureDiagnosticReport(models.Model):  
     _name = "hc.procedure.diagnostic.report"    
@@ -489,10 +395,10 @@ class ProcedureMedication(models.Model):
         comodel_name="hc.res.procedure", 
         string="Procedure", 
         help="Procedure associated with this Medication.")                  
-    # medication_id = fields.Many2one(
-    #     comodel_name="hc.res.medication", 
-    #     string="Medication", 
-    #     help="Medication associated with this Procedure.")                   
+    medication_id = fields.Many2one(
+        comodel_name="hc.res.medication", 
+        string="Medication", 
+        help="Medication associated with this Procedure.")                   
 
 class ProcedureSubstance(models.Model): 
     _name = "hc.procedure.substance"    
@@ -503,24 +409,24 @@ class ProcedureSubstance(models.Model):
         comodel_name="hc.res.procedure", 
         string="Procedure", 
         help="Procedure associated with this Substance.")                   
-    # substance_id = fields.Many2one(
-    #     comodel_name="hc.res.substance", 
-    #     string="Substance", 
-    #     help="Substance associated with this Procedure.")                   
+    substance_id = fields.Many2one(
+        comodel_name="hc.res.substance", 
+        string="Substance", 
+        help="Substance associated with this Procedure.")                   
 
-# class ProcedureComplication(models.Model):  
-#     _name = "hc.procedure.complication" 
-#     _description = "Procedure Complication"     
-#     inherit = ["hc.basic.association"]
+class ProcedureComplication(models.Model):  
+    _name = "hc.procedure.complication" 
+    _description = "Procedure Complication"     
+    inherit = ["hc.basic.association"]
 
-#     procedure_id = fields.Many2one(
-#         comodel_name="hc.res.procedure", 
-#         string="Procedure", 
-#         help="Procedure associated with this Complication.")                    
-#     complication_id = fields.Many2one(
-#         comodel_name="hc.res.", 
-#         string="Complication", 
-#         help="Complication associated with this Procedure.")                   
+    procedure_id = fields.Many2one(
+        comodel_name="hc.res.procedure", 
+        string="Procedure", 
+        help="Procedure associated with this Complication.")                    
+    complication_id = fields.Many2one(
+        comodel_name="hc.vs.condition.code", 
+        string="Complication", 
+        help="Complication associated with this Procedure.")                   
 
 class ProcedureReasonReference(models.Model):   
     _name = "hc.procedure.reason.reference" 
@@ -567,8 +473,8 @@ class ProcedureCategory(models.Model):
     _inherit = ["hc.value.set.contains"]    
 
 class ProcedureReasonCode(models.Model):    
-    _name = "hc.vs.procedure.reason.code"   
-    _description = "Procedure Reason Code"      
+    _name = "hc.vs.procedure.reason"   
+    _description = "Procedure Reason"      
     _inherit = ["hc.value.set.contains"]    
 
 class ProcedureOutcome(models.Model):   

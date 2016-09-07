@@ -10,17 +10,17 @@ class PractitionerRole(models.Model):
     person_id = fields.Many2one(
         comodel_name="hc.res.person",
         string="Person",
-        required=True,
+        required="True",
         ondelete="restrict",
         help="Person who is this practitioner.")  
     practitioner_id = fields.Many2one(
         comodel_name="hc.res.practitioner", 
         string="Practitioner", 
         help="Practitioner that is able to provide the defined services for the organization.")
-    # organization_id = fields.Many2one(
-    #     comodel_name="hc.res.organization", 
-    #     string="Organization", 
-    #     help="Organization where the roles are performed.")
+    organization_id = fields.Many2one(
+        comodel_name="hc.res.organization", 
+        string="Organization", 
+        help="Organization where the roles are performed.")
     role_id = fields.Many2one(
         comodel_name="hc.vs.practitioner.role", 
         string="Role", 
@@ -30,19 +30,19 @@ class PractitionerRole(models.Model):
         inverse_name="practitioner_role_id", 
         string="Specialties", 
         help="Specific specialty of the practitioner.")
-    # identifier_ids = fields.One2many(
-    #     comodel_name="hc.practitioner.role.identifier", 
-    #     inverse_name="practitioner_role_id", 
-    #     string="Identifiers", 
-    #     help="Business Identifiers that are specific to a role/location.")
+    identifier_ids = fields.One2many(
+        comodel_name="hc.practitioner.role.identifier", 
+        inverse_name="practitioner_role_id", 
+        string="Identifiers", 
+        help="Business Identifiers that are specific to a role/location.")
     is_active_practitioner_role = fields.Boolean(
         string="Active", 
         help="Whether this practitioner role record is in active use.")
-    # telecom_ids = fields.One2many(
-    #     comodel_name="hc.practitioner.role.telecom", 
-    #     inverse_name="practitioner_role_id", 
-    #     string="Telecoms", 
-    #     help="Contact details that are specific to the role/location/service.")
+    telecom_ids = fields.One2many(
+        comodel_name="hc.practitioner.role.telecom", 
+        inverse_name="practitioner_role_id", 
+        string="Telecoms", 
+        help="Contact details that are specific to the role/location/service.")
     start_date = fields.Datetime(
         string="Start Date", 
         help="Start of the the period during which the practitioner is authorized to perform in these role(s).")
@@ -82,15 +82,15 @@ class PractitionerRoleSpecialty(models.Model):
         comodel_name="hc.vs.practitioner.specialty", 
         string="Specialty", 
         help="Specialty associated with a practitioner role.")             
-    # is_active_practitioner_specialty = fields.Boolean(
-    #     string="Active", 
-    #     help="Whether this practitioner role specialty record is in active use.")               
-    # start_date = fields.Datetime(
-    #     string="Start Date", 
-    #     help="Start of the period when the practitioner role specialty is/was valid.")                
-    # end_date = fields.Datetime(
-    #     string="End Date", 
-    #     help="End of the period when the practitioner role specialty is/was valid.")              
+    is_active = fields.Boolean(
+        string="Active", 
+        help="Whether this practitioner role specialty record is in active use.")               
+    start_date = fields.Datetime(
+        string="Start Date", 
+        help="Start of the period when the practitioner role specialty is/was valid.")                
+    end_date = fields.Datetime(
+        string="End Date", 
+        help="End of the period when the practitioner role specialty is/was valid.")              
 
 class PractitionerRoleIdentifier(models.Model): 
     _name = "hc.practitioner.role.identifier"   
@@ -100,7 +100,7 @@ class PractitionerRoleIdentifier(models.Model):
     person_identifier_id = fields.Many2one(
         comodel_name="hc.person.identifier", 
         string="Person Identifier",
-        required=True, 
+        required="True", 
         ondelete="restrict", 
         help="Identifier associated with this practitioner role.")
     practitioner_role_id = fields.Many2one(
@@ -108,36 +108,23 @@ class PractitionerRoleIdentifier(models.Model):
         string="Practitioner Role",
         help="Practitioner role associated with this identifier.")              
 
-              
-    # identifier_use = fields.Selection(
-    #     string="Identifier Use", 
-    #     selection=[
-    #         ("usual", "Usual"), 
-    #         ("official", "Official"), 
-    #         ("temp", "Temporary"), 
-    #         ("secondary", "Secondary")], 
-    #     help="The purpose of this identifier.")             
-    # value = fields.Char(
-    #     string="Value", 
-    #     help="The portion of the identifier typically relevant to the user and which is unique within the context of the system.")              
-
 class PractitionerRoleTelecom(models.Model):    
     _name = "hc.practitioner.role.telecom"  
     _description = "Practitioner Role Telecom"      
-    _inherit = ["hc.basic.association"]
+    _inherit = ["hc.telecom.contact.point"]
     _inherits = {"hc.telecom": "telecom_id"}
 
     telecom_id = fields.Many2one(
         comodel_name="hc.telecom", 
         string="Telecom", 
-        required=True, 
+        required="True", 
         ondelete="restrict", 
         help="Identifies telecom contact point associated with this practitioner role.") 
     practitioner_role_id = fields.Many2one(
         comodel_name="hc.res.practitioner.role",  
         string="Practitioner Role", 
         help="Practitioner role associated with this telecom contact point.")               
-                 
+
 class PractitionerRoleLocation(models.Model):   
     _name = "hc.practitioner.role.location" 
     _description = "Practitioner Role Location"     
@@ -147,10 +134,10 @@ class PractitionerRoleLocation(models.Model):
         comodel_name="hc.res.practitioner.role",  
         string="Practitioner Role", 
         help="Practitioner role associated with this location.")                
-    # location_id = fields.Many2one(
-    #     comodel_name="hc.res.location", 
-    #     string="Location", 
-    #     help="Location associated with this practitioner role.")               
+    location_id = fields.Many2one(
+        comodel_name="hc.res.location", 
+        string="Location", 
+        help="Location associated with this practitioner role.")               
 
 class PractitionerRoleHealthcareService(models.Model):  
     _name = "hc.practitioner.role.healthcare.service"   
@@ -164,25 +151,7 @@ class PractitionerRoleHealthcareService(models.Model):
     # healthcare_service_id = fields.Many2one(
     #     comodel_name="hc.res.healthcare service", 
     #     string="Healthcare Service", 
-    #     help="Healthcare service associated with this practitioner role.")               
-
-class AvailableTime(models.Model):  
-    _name = "hc.available.time" 
-    _description = "Available Time"
-     
-    days_of_week_ids = fields.Many2many(
-        comodel_name="hc.vs.days.of.week",
-        string="Days Of Week", 
-        help="The days of the week.")        
-    is_all_day = fields.Boolean(
-        string="All Day", 
-        help="Always available? e.g. 24 hour service.")       
-    available_start_time = fields.Char(
-        string="Available Start Time", 
-        help="Opening time of day (ignored if allDay = true).")       
-    available_end_time = fields.Char(
-        string="Available End Time", 
-        help="Closing time of day (ignored if allDay = true).")       
+    #     help="Healthcare service associated with this practitioner role.")                     
 
 class PractitionerRoleAvailableTime(models.Model):  
     _name = "hc.practitioner.role.available.time" 
@@ -193,20 +162,6 @@ class PractitionerRoleAvailableTime(models.Model):
         comodel_name="hc.res.practitioner.role",  
         string="Practitioner Role", 
         help="Practitioner role associated with available time.")       
-
-class NotAvailableTime(models.Model):   
-    _name = "hc.not.available.time" 
-    _description = "Not Available Time"     
-
-    description = fields.Text(
-        string="Description", 
-        help="Reason presented to the user explaining why time not available.")             
-    not_available_start_time = fields.Char(
-        string="Not Available Start Time", 
-        help="Start of the period service not available from this date.")             
-    not_available_end_time = fields.Char(
-        string="Not Available End Time", 
-        help="End of the period service not available from this date.")
 
 class PractitionerRoleNotAvailableTime(models.Model):   
     _name = "hc.practitioner.role.not.available.time" 

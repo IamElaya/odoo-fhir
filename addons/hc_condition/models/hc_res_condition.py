@@ -53,15 +53,15 @@ class Condition(models.Model):
         string="Body Sites", 
         help="Anatomical location, if relevant.")               
     subject_type = fields.Selection(
-        string="Condition Subject Type", 
+        string="Condition Subject Type",
+        required="True", 
         selection=[
             ("Patient", "Patient"), 
             ("Group", "Group")], 
         help="Type of who has the condition.")
     subject_name = fields.Char(
-        string="Subject Name", 
-        compute="compute_subject_name", 
-        required="True", 
+        string="Subject", 
+        compute="compute_subject_name",  
         help="Who has the condition?")                
     subject_patient_id = fields.Many2one(
         comodel_name="hc.res.patient", 
@@ -74,25 +74,25 @@ class Condition(models.Model):
         required="True", 
         help="Group who has the condition.")                
     context_type = fields.Selection(
-        string="Condition Context Type", 
+        string="Condition Context Type",
         selection=[
             ("Encounter", "Encounter"), 
             ("Episode Of Care", "Episode of Care")], 
         help="Type of encounter when condition first asserted.")                    
     context_name = fields.Char(
-        string="Context Name", 
+        string="Context", 
         compute="compute_context_name", 
         help="Encounter when condition first asserted.")                
     # context_encounter_id = fields.Many2one(
     #     comodel_name="hc.res.encounter", 
     #     string="Context Encounter", 
     #     help="Encounter when condition first asserted.")                    
-    # context_episode_of_care_id = fields.Many2one(
-    #     comodel_name="hc.res.episode.of.care", 
-    #     string="Context Episode Of Care", 
-    #     help="Episode Of Care when condition first asserted.")                    
+    context_episode_of_care_id = fields.Many2one(
+        comodel_name="hc.res.episode.of.care", 
+        string="Context Episode Of Care", 
+        help="Episode Of Care when condition first asserted.")                    
     onset_type = fields.Selection(
-        string="Condition Onset Type", 
+        string="Condition Onset Type",
         selection=[
             ("dateTime", "Datetime"), 
             ("Age", "Age"), 
@@ -101,7 +101,7 @@ class Condition(models.Model):
             ("string", "String")], 
         help="Type of onset.")
     onset_name = fields.Char(
-        string="Onset Name", 
+        string="Onset", 
         compute="compute_onset_name", 
         help="Estimated or actual date, date-time, or age.")             
     onset_datetime = fields.Datetime(
@@ -129,7 +129,7 @@ class Condition(models.Model):
         string="Onset Range High", 
         help="High limit of estimated or actual date, date-time, or age.")                    
     abatement_type = fields.Selection(
-        string="Condition Abatement Type", 
+        string="Condition Abatement Type",
         selection=[
             ("date", "Date"), 
             ("Age", "Age"), 
@@ -139,7 +139,7 @@ class Condition(models.Model):
             ("string", "String")], 
         help="Type of abatement.")                    
     abatement_name = fields.Char(
-        string="Abatement Name", 
+        string="Abatement", 
         compute="compute_abatement_name", 
         help="If/when in resolution/remission .")                   
     abatement_date = fields.Date(
@@ -176,13 +176,13 @@ class Condition(models.Model):
         string="Date Asserted",
         help="When first entered.")                    
     asserter_type = fields.Selection(
-        string="Condition Asserter Type", 
+        string="Condition Asserter Type",
         selection=[
             ("Practitioner", "Practitioner"), 
             ("Patient", "Patient")], 
         help="Type of asserter.")                    
     asserter_name = fields.Char(
-        string="Asserter Name", 
+        string="Asserter", 
         compute="compute_asserter_name", 
         help="Person who asserts this condition.")                  
     asserter_practitioner_id = fields.Many2one(
@@ -291,7 +291,7 @@ class ConditionStageAssessment(models.Model):
             ("observation", "Observation")], 
         help="Type of assessment.")                    
     assessment_name = fields.Char(
-        string="Assessment Name", 
+        string="Assessment", 
         compute="compute_assessment_name", 
         help="Formal record of assessment.")                   
     # assessment_clinical_impression_id = fields.Many2one(
@@ -325,7 +325,7 @@ class ConditionEvidenceDetail(models.Model):
             ("diagnostic report", "Diagnostic Report")], 
         help="Type of supporting information found elsewhere.")                    
     detail_name = fields.Char(
-        string="Detail Name", 
+        string="Details", 
         compute="compute_detail_name", 
         help="Supporting information found elsewhere.")                
     detail = fields.Char(
@@ -337,7 +337,7 @@ class ConditionEvidenceDetail(models.Model):
     #     help="Observation supporting information found elsewhere.")                    
     # detail_clinical_impression_id = fields.Many2one(
     #     comodel_name="hc.res.clinical.impression", 
-    #     string="Detaill Clinical Impression", 
+    #     string="Detail Clinical Impression", 
     #     help="Clinical Impression supporting information found elsewhere.")                    
     # detail_diagnostic_report_id = fields.Many2one(
     #     comodel_name="hc.res.diagnostic.report", 
@@ -368,3 +368,21 @@ class ConditionStage(models.Model):
     _name = "hc.vs.condition.stage"    
     _description = "Condition Stage"        
     _inherit = ["hc.value.set.contains"]
+
+# External Reference
+
+class EpisodeOfCareCondition(models.Model):    
+    _inherit = "hc.episode.of.care.condition"  
+              
+    condition_id = fields.Many2one(
+        comodel_name="hc.res.condition", 
+        string="Condition", 
+        help="Condition associated with this episode of care condition.")
+
+class ProcedureReasonReference(models.Model):   
+    _inherit = "hc.procedure.reason.reference"
+                       
+    condition_id = fields.Many2one(
+        comodel_name="hc.res.condition", 
+        string="Condition", 
+        help="Condition associated with this Procedure.")

@@ -1,0 +1,22 @@
+<openerp>
+    <data>
+    
+        <!-- Device Component Action and Menu -->   
+    
+        <act_window id="hc_res_device_component_action" 
+                    name="HC Device Components"
+                    res_model="hc.res.device.component"
+                    view_mode="tree,form"
+                    domain=""
+                    context=""
+                    limit=""/>
+
+        <menuitem id="hc_device_component.menu_dev_comp" 
+                  name="Device Components" 
+                  parent="hc_base.menu_dev" 
+                  action="hc_res_device_component_action" 
+                  groups="hc_base.group_hc_base_manager" 
+                  sequence="20"/>
+
+    </data>
+</openerp>

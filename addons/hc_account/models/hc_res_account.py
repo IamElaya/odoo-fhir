@@ -42,8 +42,7 @@ class Account(models.Model):
         string="Coverage Period End Date", 
         help="End of the transaction window.")                    
     subject_type = fields.Selection(
-        string="Subject Type", 
-        required="True", 
+        string="Subject Type",
         selection=[
             ("patient", "Patient"), 
             ("device", "Device"), 
@@ -53,17 +52,17 @@ class Account(models.Model):
             ("organization", "Organization")], 
         help="Type of what is account tied to.")                   
     subject_name = fields.Char(
-        string="Subject Name", 
+        string="Subject", 
         compute="compute_subject_name", 
         help="What is account tied to.")                    
     subject_patient_id = fields.Many2one(
         comodel_name="hc.res.patient", 
         string="Subject Patient", 
         help="Patient transaction window.")                    
-    # subject_device_id = fields.Many2one(
-    #     comodel_name="hc.res.device", 
-    #     string="Subject Device", 
-    #     help="Device transaction window.")                    
+    subject_device_id = fields.Many2one(
+        comodel_name="hc.res.device", 
+        string="Subject Device", 
+        help="Device transaction window.")                    
     subject_practitioner_id = fields.Many2one(
         comodel_name="hc.res.practitioner", 
         string="Subject Practitioner", 

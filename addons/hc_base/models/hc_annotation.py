@@ -27,7 +27,7 @@ class Annotation(models.AbstractModel):
             ("related person", "Related Person")],
         help="Type of individual responsible for the annotation.")
     author_name = fields.Char(
-        string="Author Name",
+        string="Author",
         compute="compute_author_name",
         help="Individual responsible for the annotation.")
     author_string = fields.Char(
@@ -54,3 +54,14 @@ class Annotation(models.AbstractModel):
     #             hc_annotation.author_name = hc_annotation.author_patient_id.name
     #         elif hc_annotation.author_type == 'related person':
     #             hc_annotation.author_name = hc_annotation.author_related_person_id.name
+
+
+    # @api.multi
+    # def _compute_author_name(self):
+    #     for hc_annot in self:
+    #         if hc_annot.author_type == 'practitioner':
+    #             hc_annot.author_name = hc_annot.author_practitioner_id.name
+    #         elif hc_annot.author_type == 'patient':
+    #             hc_annot.author_name = hc_annot.author_patient_id.name
+    #         elif hc_annot.author_type == 'related person':
+    #             hc_annot.author_name = hc_annot.author_related_person_id.name

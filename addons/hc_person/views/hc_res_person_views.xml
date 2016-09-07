@@ -17,7 +17,7 @@
             <field name="model">hc.res.person</field>     
             <field name="arch" type="xml">      
                 <tree string="Persons">   
-                    <field name="name" string="Person Name"/>  
+                    <field name="name"/>  
                     <field name="gender"/>  
                     <field name="birthdate"/> 
                 </tree>   
@@ -143,6 +143,7 @@
                                         <field name="is_preferred"/>
                                         <field name="telecom_id"/>
                                         <field name="use"/>
+                                        <field name="rank"/>
                                     </tree>
                                     <form>
                                         <sheet>
@@ -150,6 +151,7 @@
                                                 <group>
                                                     <field name="telecom_id"/>
                                                     <field name="use"/>
+                                                    <field name="rank"/>
                                                 </group>
                                                 <group>
                                                     <field name="is_preferred"/>
@@ -162,16 +164,17 @@
                                     </form>
                                 </field>
                             </page>          
-                            <page string="Attachments">
-                                <field name="attachment_ids" mode="tree">
+                            <page string="Photos">
+                                <field name="photo_ids" mode="tree">
                                     <tree>
-                                        <field name="attachment_id"/>
+                                        <field name="name" string="Photo Name"/>
                                     </tree>
                                     <form>
                                         <sheet>
                                             <group>
                                                 <group>
-                                                    <field name="attachment_id"/>
+                                                    <field name="name" string="Photo Name"/>
+                                                    <field name="datas"/>
                                                 </group>
                                                 <group>
                                                     <field name="is_preferred"/>

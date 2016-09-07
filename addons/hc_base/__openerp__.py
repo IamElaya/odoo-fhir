@@ -31,6 +31,7 @@
         'data/data_language.xml',
         'data/data_language_proficiency.xml',
         'data/data_language_skill.xml',
+        'data/hc.vs.human.name.suffix.csv',
         'data/data_participation_type.xml',
         'data/hc_base_data.xml',
         # 'data/l10n_au/country_pl.xml',
@@ -56,5 +57,9 @@
     'demo': [
         'demo/demo.xml',
         # 'demo/hc.vs.country.city.csv',
+        'demo/hc.human.name.term.csv',
+        'demo/hc.human.name.csv',
+        'demo/hc.res.person.csv',
+
     ],
 }

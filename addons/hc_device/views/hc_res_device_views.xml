@@ -1,0 +1,22 @@
+<openerp>
+    <data>
+
+        <!-- Device Action and Menu --> 
+    
+        <act_window id="hc_res_device_action"   
+                    name="HC Devices"
+                    res_model="hc.res.device"
+                    view_mode="tree,form"
+                    domain=""
+                    context=""
+                    limit=""/>
+
+        <menuitem id="hc_device.menu_dev_dev" 
+                  name="Devices" 
+                  parent="hc_base.menu_dev" 
+                  action="hc_res_device_action" 
+                  groups="hc_base.group_hc_base_manager" 
+                  sequence="10"/>
+                  
+    </data>
+</openerp>

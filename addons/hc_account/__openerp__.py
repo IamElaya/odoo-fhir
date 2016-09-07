@@ -21,7 +21,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['account', 'hc_healthcare_service', 'hc_coverage'],
+    'depends': ['account', 'hc_practitioner', 'hc_device', 'hc_coverage'],
 
     # always loaded
     'data': [
@@ -33,4 +33,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': 'True',
+    'auto-install': 'True',
 }

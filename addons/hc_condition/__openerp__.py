@@ -44,7 +44,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['hc_practitioner', 'hc_group', 'hc_procedure'],
+    'depends': ['hc_procedure', 'hc_body_site', 'hc_episode_of_care'],
 
     # always loaded
     'data': [
@@ -56,4 +56,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': 'True',
+    'auto-install': 'True',
 }

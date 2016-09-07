@@ -49,10 +49,10 @@ class Location(models.Model):
     altitude = fields.Float(
         string="Altitude", 
         help="Altitude with WGS84 datum.")
-    # managing_organization_id = fields.Many2one(
-    #     comodel_name="hc.res.organization", 
-    #     string="Managing Organization", 
-    #     help="The organization that is responsible for the provisioning and upkeep of the location.")
+    managing_organization_id = fields.Many2one(
+        comodel_name="hc.res.organization", 
+        string="Managing Organization", 
+        help="The organization that is responsible for the provisioning and upkeep of the location.")
     part_of_id = fields.Many2one(
         comodel_name="hc.res.location", 
         string="Part Of", 
@@ -99,7 +99,7 @@ class Location(models.Model):
     class locationTelecom(models.Model):  
         _name = "hc.location.telecom" 
         _description = "location Telecom"
-        _inherit = ["hc.basic.association"]
+        _inherit = ["hc.telecom.contact.point"]
         _inherits = {"hc.telecom": "telecom_id"}
      
         telecom_id = fields.Many2one(
@@ -112,30 +112,21 @@ class Location(models.Model):
             comodel_name="hc.res.location", 
             string="Location", 
             help="location associated with this telecom contact point.")
-        use = fields.Selection(
-            string="Telecom Use", 
-            selection=[
-                ("home", "Home"), 
-                ("work", "Work"), 
-                ("temp", "Temp"),                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-                ("old", "Old"),
-                ("mobile", "Mobile")], 
-            help="Purpose of this telecom contact point.")
 
 # External Reference
 
-class PractitionerRoleLocation(models.Model):   
-    _inherit = ["hc.practitioner.role.location"]
+# class PractitionerRoleLocation(models.Model):   
+#     _inherit = ["hc.practitioner.role.location"]
                  
-    location_id = fields.Many2one(
-        comodel_name="hc.res.location", 
-        string="Location", 
-        help="Location associated with this practitioner role.")
+#     location_id = fields.Many2one(
+#         comodel_name="hc.res.location", 
+#         string="Location", 
+#         help="Location associated with this practitioner role.")
 
-class OrganizationLocation(models.Model):
-    _inherit = ["hc.organization.location"] 
+# class OrganizationLocation(models.Model):
+#     _inherit = ["hc.organization.location"] 
 
-    location_id = fields.Many2one(
-        comodel_name="hc.res.location", 
-        string="Location",
-        help="Location associated with this organization.")
+#     location_id = fields.Many2one(
+#         comodel_name="hc.res.location", 
+#         string="Location",
+#         help="Location associated with this organization.")

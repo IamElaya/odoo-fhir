@@ -1,0 +1,22 @@
+<openerp>
+  <data>
+    
+        <!-- Device Metric Action and Menu -->  
+        
+        <act_window id="hc_res_device_metric_action"    
+                    name="HC Device Metrics"
+                    res_model="hc.res.device.metric"
+                    view_mode="tree,form"
+                    domain=""
+                    context=""
+                    limit=""/>
+
+        <menuitem id="hc_device_metric.menu_dev_metric" 
+                  name="Device Metrics" 
+                  parent="hc_base.menu_dev" 
+                  action="hc_res_device_metric_action" 
+                  groups="hc_base.group_hc_base_manager" 
+                  sequence="30"/>
+
+  </data>
+</openerp>
