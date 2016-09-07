@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+		<record id="lang_skill_basic" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_basic</field>			
+			<field name="name">Basic Skill</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref=""/>			
+			<field name="level">1</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_reading" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_reading</field>			
+			<field name="name">Reading</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_basic"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_speaking" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_speaking</field>			
+			<field name="name">Speaking</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_basic"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_listening" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_listening</field>			
+			<field name="name">Listening</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_basic"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_writing" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_writing</field>			
+			<field name="name">Writing</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_basic"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_advanced" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_advanced</field>			
+			<field name="name">Advanced Skill</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref=""/>			
+			<field name="level">1</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_translation" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_translation</field>			
+			<field name="name">Translation</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_advanced"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_audiotranslation" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_audiotranslation</field>			
+			<field name="name">Audio Translation</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_advanced"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_interpretation" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_interpretation</field>			
+			<field name="name">Interpretation</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_advanced"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+		<record id="lang_skill_intercultural_communication" model="hc.vs.language.skill">				
+			<field name="code">lang_skill_intercultural_communication</field>			
+			<field name="name">Intercultural Communication</field>			
+			<field name="is_abstract"></field>			
+			<field name="parent_id" ref="lang_skill_advanced"/>			
+			<field name="level">2</field>			
+			<field name="definition"></field>			
+			<field name="source_id" ref="base.lang_skill"/>			
+			<field name="system">http://www.languagelearningportal.com/articles/en-GB/1062/essential-skills-in-language-learning.html</field>			
+		</record>				
+
+    </data>
+</odoo>

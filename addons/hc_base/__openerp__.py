@@ -29,6 +29,8 @@
         'data/data_source.xml',
         'data/data_identifier_type.xml',
         'data/data_language.xml',
+        'data/data_language_proficiency.xml',
+        'data/data_language_skill.xml',
         'data/data_participation_type.xml',
         'data/hc_base_data.xml',
         # 'data/l10n_au/country_pl.xml',

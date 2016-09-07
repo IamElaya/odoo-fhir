@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+    	<!-- Language Proficiency -->
+		<record id="0" model="hc.vs.language.proficiency">						
+			<field name="code">0</field>					
+			<field name="name">No Practical Proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">No practical speaking proficiency.
+		No practical reading proficiency.</field>					
+			<field name="source_id" ref="base.lang_prof_ilr"/>					
+			<field name="system">https://careers.state.gov/gateway/lang_prof_def.html</field>					
+		</record>						
+		<record id="1" model="hc.vs.language.proficiency">						
+			<field name="code">1</field>					
+			<field name="name">Elementary Proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">Able to satisfy routine travel needs and minimum courtesy requirements
+		Able to read some personal and place names, street signs, office and shop designations, numbers and isolated words and phrases</field>					
+			<field name="source_id" ref="base.lang_prof_ilr"/>					
+			<field name="system">https://careers.state.gov/gateway/lang_prof_def.html</field>					
+		</record>						
+		<record id="2" model="hc.vs.language.proficiency">						
+			<field name="code">2</field>					
+			<field name="name">Limited Working Proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">Able to satisfy routine social demands and limited work requirements
+		Able to read simple prose, in a form equivalent to typescript or printing, on subjects within a familiar context</field>					
+			<field name="source_id" ref="base.lang_prof_ilr"/>					
+			<field name="system">https://careers.state.gov/gateway/lang_prof_def.html</field>					
+		</record>						
+		<record id="3" model="hc.vs.language.proficiency">						
+			<field name="code">3</field>					
+			<field name="name">Minimum Professional Proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">Able to speak the language with sufficient structural accuracy and vocabulary to participate effectively in most formal and informal conversations on practical, social, and professional topics
+		Able to read standard newspaper items addressed to the general reader, routine correspondence, reports, and technical materials in the individual's special field.</field>					
+			<field name="source_id" ref="base.lang_prof_ilr"/>					
+			<field name="system">https://careers.state.gov/gateway/lang_prof_def.html</field>					
+		</record>						
+		<record id="4" model="hc.vs.language.proficiency">						
+			<field name="code">4</field>					
+			<field name="name">Full Professional Proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">Able to use the language fluently and accurately on all levels pertinent to professional needs.
+		Able to read all styles and forms of the language pertinent to professional needs.</field>					
+			<field name="source_id" ref="base.lang_prof_ilr"/>					
+			<field name="system">https://careers.state.gov/gateway/lang_prof_def.html</field>					
+		</record>						
+		<record id="5" model="hc.vs.language.proficiency">						
+			<field name="code">5</field>					
+			<field name="name">Native or Bilingual Proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">Equivalent to that of an educated native speaker.
+		Equivalent to that of an educated native.</field>					
+			<field name="source_id" ref="base.lang_prof_ilr"/>					
+			<field name="system">https://careers.state.gov/gateway/lang_prof_def.html</field>					
+		</record>						
+		<record id="a" model="hc.vs.language.proficiency">						
+			<field name="code">A</field>					
+			<field name="name">Basic user</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="a1" model="hc.vs.language.proficiency">						
+			<field name="code">A1</field>					
+			<field name="name">Breakthrough or beginner</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="a"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.
+		Can introduce themselves and others and can ask and answer questions about personal details such as where he/she lives, people they know and things they have.
+		Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help.</field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="b" model="hc.vs.language.proficiency">						
+			<field name="code">B</field>					
+			<field name="name">Independent User</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="c" model="hc.vs.language.proficiency">						
+			<field name="code">C</field>					
+			<field name="name">Proficient User</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="a2" model="hc.vs.language.proficiency">						
+			<field name="code">A2</field>					
+			<field name="name">Way stage or elementary</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="a"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).
+		Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.
+		Can describe in simple terms aspects of their background, immediate environment and matters in areas of immediate need.</field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="b1" model="hc.vs.language.proficiency">						
+			<field name="code">B1</field>					
+			<field name="name">Treshold or intermediate</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="b"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.
+		Can deal with most situations likely to arise while travelling in an area where the language is spoken.
+		Can produce simple connected text on topics that are familiar or of personal interest.
+		Can describe experiences and events, dreams, hopes and ambitions and briefly give reasons and explanations for opinions and plans.</field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="b2" model="hc.vs.language.proficiency">						
+			<field name="code">B2</field>					
+			<field name="name">Vantage or upper intermediate</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="b"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialization.
+		Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.
+		Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options.</field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="c1" model="hc.vs.language.proficiency">						
+			<field name="code">C1</field>					
+			<field name="name">Effective operational proficiency or advanced</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="c"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can understand a wide range of demanding, longer clauses, and recognize implicit meaning.
+		Can express ideas fluently and spontaneously without much obvious searching for expressions.
+		Can use language flexibly and effectively for social, academic and professional purposes.
+		Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organizational patterns, connectors and cohesive devices.</field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="c2" model="hc.vs.language.proficiency">						
+			<field name="code">C2</field>					
+			<field name="name">Mastery or proficiency</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="c"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can understand with ease virtually everything heard or read.
+		Can summarize information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.
+		Can express themselves spontaneously, very fluently and precisely, differentiating finer shades of meaning even in the most complex situations.</field>					
+			<field name="source_id" ref="base.lang_prof_cefr"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages</field>					
+		</record>						
+		<record id="n" model="hc.vs.language.proficiency">						
+			<field name="code">N</field>					
+			<field name="name">Novice</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">The Novice level is characterized by the ability to communicate minimally with learned material.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="i" model="hc.vs.language.proficiency">						
+			<field name="code">I</field>					
+			<field name="name">Intermediate</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">The Intermediate level is characterized by the speaker's ability to:
+		  
+		create with the language by combining and recombining learned elements, though primarily in a reactive mode
+		initiate, minimally sustain, and close in a simple way basic communicative tasks
+		ask and answer questions.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="a" model="hc.vs.language.proficiency">						
+			<field name="code">A</field>					
+			<field name="name">Advanced</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">The Advanced level is characterized by the speaker's ability to:
+		    
+		converse in a clearly participatory fashion
+		initiate, sustain, and bring to closure a wide variety of communicative tasks, including those that require an increased ability to convey meaning with diverse language strategies due to a complication or an unforeseen turn of events
+		satisfy the requirements of school and work situations, and
+		narrate and describe with paragraph-length connected discourse.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="s" model="hc.vs.language.proficiency">						
+			<field name="code">S</field>					
+			<field name="name">Superior</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition">The Superior level is characterized by the speaker's ability to:
+		         
+		participate effectively in most formal and informal conversations on practical, social, professional, and abstract topics
+		support opinions and hypothesize using native-like discourse strategies.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="d" model="hc.vs.language.proficiency">						
+			<field name="code">D</field>					
+			<field name="name">Distinguished</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="nl" model="hc.vs.language.proficiency">						
+			<field name="code">NL</field>					
+			<field name="name">Novice - Low</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="n"/>					
+			<field name="level">2</field>					
+			<field name="definition">Understanding is limited to occasional isolated words, such as cognates, borrowed words, and high-frequency social conventions. Essentially no ability to comprehend even short utterances.
+		Oral production consists of isolated words and perhaps a few high-frequency phrases. Essentially no functional communicative ability.
+		Able occasionally to identify isolated words and/or major phrases when strongly supported by context.
+		Able to form some letters in an alphabetic system. In languages whose writing systems use syllabaries or characters, writer is able to both copy and produce the basic strokes. Can produce romanization of isolated characters, where applicable.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="nm" model="hc.vs.language.proficiency">						
+			<field name="code">NM</field>					
+			<field name="name">Novice - Mid</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="n"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand some short, learned utterances, particularly where context strongly supports understanding and speech is clearly audible. Comprehends some words and phrases from simple questions, statements, high-frequency commands and courtesy formulae about topics that refer to basic personal information or the immediate physical setting. The listener requires long pauses for assimilation and periodically requests repetition and/or a slower rate of speech.
+		Oral production continues to consist of isolated words and learned phrases within very predictable areas of need, although quantity is increased. Vocabulary is sufficient only for handling simple, elementary needs and expressing basic courtesies. Utterances rarely consist of more than two or three words and show frequent long pauses and repetition of interlocutor's words. Speaker may have some difficulty producing even the simplest utterances. Some Novice-Mid speakers will be understood only with great difficulty.
+		Able to recognize the symbols of an alphabetic and/or syllabic writing system and/or a limited number of characters in a system that uses characters. The reader can identify an increasing number of highly contextualized words and/or phrases including cognates and borrowed words, where appropriate. Material understood rarely exceeds a single phrase at a time, and rereading may be required.
+		Able to copy or transcribe familiar words or phrases and reproduce some from memory. No practical communicative writing skills.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="nh" model="hc.vs.language.proficiency">						
+			<field name="code">NH</field>					
+			<field name="name">Novice - High</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="n"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand short, learned utterances and some sentence-length utterances, particularly where context strongly supports understanding and speech is clearly audible. Comprehends words and phrases from simple questions, statements, high-frequency commands, and courtesy formulae. May require repetition, rephrasing, and/or a slowed rate of speech for comprehension.
+		Able to satisfy partially the requirements of basic communicative exchanges by relying heavily on learned utterances but occasionally expanding these through simple recombinations of their elements. Can ask questions or make statements involving learned material. Shows signs of spontaneity although this falls short of real autonomy of expression. Speech continues to consist of learned utterances rather than of personalized, situationally adapted ones. Vocabulary centers on areas such as basic objects, places, and most common kinship terms. Pronunciation may still be strongly influenced by first language. Errors are frequent and, in spite of repetition, some Novice-High speakers will have difficulty being understood even by sympathetic interlocutors.
+		Has sufficient control of the writing system to interpret written language in areas of practical need. Where vocabulary has been learned, can read for instructional and directional purposes, standardized messages, phrases, or expressions, such as some items on menus, schedules, timetables, maps, and signs. At times, but not on a consistent basis, the Novice-High level reader may be able to derive meaning from material at a slightly higher level where context and/or extralinguistic background knowledge are supportive.
+		Able to write simple, fixed expressions and limited memorized material and some recombinations thereof. Can supply information on simple forms and documents. Can write names, numbers, dates, own nationality, and other simple autobiographical information, as well as some short phrases and simple lists. Can write all the symbols in an alphabetic or syllabic system or 50-100 characters or compounds in a character writing system. Spelling and representation of symbols (letters, syllables, characters) may be partially correct.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="il" model="hc.vs.language.proficiency">						
+			<field name="code">IL</field>					
+			<field name="name">Intermediate - Low</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="i"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand sentence-length utterances which consist of recombinations of learned elements in a limited number of content areas, particularly if strongly supported by the situational context. Content refers to basic personal background and needs, social conventions and routine tasks, such as getting meals and receiving simple instructions and directions. Listening tasks pertain primarily to spontaneous face-to-face conversations. Understanding is often uneven; repetition and rewording may be necessary. Misunderstandings in both main ideas and details arise frequently.
+		Able to handle successfully a limited number of interactive, task-oriented, and social situations. Can ask and answer questions, initiate and respond to simple statements, and maintain face-to-face conversation, although in a highly restricted manner and with much linguistic inaccuracy. Within these limitations, can perform such tasks as introducing self, ordering a meal, asking directions, and making purchases. Vocabulary is adequate to express only the most elementary needs. Strong interference from native language may occur. Misunderstandings frequently arise, but with repetition, the Intermediate-Low speaker can generally be understood by sympathetic interlocutors.
+		Able to understand main ideas and/or some facts from the simplest connected texts dealing with basic personal and social needs. Such texts are linguistically noncomplex and have a clear underlying internal structure, for example, chronological sequencing. They impart basic information about which the reader has to make only minimal suppositions or to which the reader brings personal interest and/or knowledge. Examples include messages with social purposes and information for the widest possible audience, such as public announcements and short, straightforward instructions dealing with public life. Some misunderstandings will occur.
+		Able to meet limited practical writing needs. Can write short messages, postcards, and take down simple notes, such as telephone messages. Can create statements or questions within the scope of limited language experience. Material produced consists of recombinations of learned vocabulary and structures into simple sentences on very familiar topics.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="im" model="hc.vs.language.proficiency">						
+			<field name="code">IM</field>					
+			<field name="name">Intermediate - Mid</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="i"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand sentence-length utterances which consist of recombinations of learned utterances on a variety of topics. Content continues to refer primarily to basic personal background and needs, social conventions and somewhat more complex tasks, such as lodging, transportation, and shopping. Additional content areas include some personal interests and activities, and a greater diversity of instructions and directions. Listening tasks not only pertain to spontaneous face-to-face conversations but also to short routine telephone conversations and some deliberate speech, such as simple announcements and reports over the media. Understanding continues to be uneven.
+		Able to handle successfully a variety of uncomplicated, basic, and communicative tasks and social situations. Can talk simply about self and family members. Can ask and answer questions and participate in simple conversations on topics beyond the most immediate needs; e.g., personal history and leisure time activities. Utterance length increases slightly, but speech may continue to be characterized by frequent long pauses, since the smooth incorporation of even basic conversational strategies is often hindered as the speaker struggles to create appropriate language forms. Pronunciation may continue to be strongly influenced by first language and fluency may still be strained. Although misunderstandings still arise, the Intermediate-Mid speaker can generally be understood by sympathetic interlocutors.
+		Able to read consistently with increased understanding simple, connected texts dealing with a variety of basic and social needs. Such texts are still linguistically noncomplex and have a clear underlying internal structure. They impart basic information about which the reader has to make minimal suppositions and to which the reader brings personal interest and/or knowledge. Examples may include short, straightforward descriptions of persons, places, and things written for a wide audience.
+		Able to meet a number of practical writing needs. Can write short, simple letters. Content involves personal preferences, daily routine, everyday events, and other topics grounded in personal experience. Can express present time and at least one other time frame or aspect consistently, e.g., nonpast, habitual, imperfective. Evidence of control of the syntax of non-complex sentences and basic inflectional morphology, such as declensions and conjugation. Writing tends to be a loose collection of sentences or sentence fragments on a given topic and provides little evidence of conscious organization. Can be understood by natives used to the writing of non-natives.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="ih" model="hc.vs.language.proficiency">						
+			<field name="code">IH</field>					
+			<field name="name">Intermediate - High</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="i"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to sustain understanding over longer stretches of connected discourse on a number of topics pertaining to different times and places; however, understanding is inconsistent due to failure to grasp main ideas and/or details. Thus, while topics do not differ significantly from those of an Advanced level listener, comprehension is less in quantity and poorer in quality.
+		Able to handle successfully most uncomplicated communicative tasks and social situations. Can initiate, sustain, and close a general conversation with a number of strategies appropriate to a range of circumstances and topics, but errors are evident. Limited vocabulary still necessitates hesitation and may bring about slightly unexpected circumlocution. There is emerging evidence of connected discourse, particularly for simple narration and/or description. The Intermediate-High speaker can generally be understood even by interlocutors not accustomed to dealing with speakers at this level, but repetition may still be required.
+		Able to read consistently with full understanding simple connected texts dealing with basic personal and social needs about which the reader has personal interest and/or knowledge. Can get some main ideas and information from texts at the next higher level featuring description and narration. Structural complexity may interfere with comprehension; for example, basic grammatical relations may be misinterpreted and temporal references may rely primarily on lexical items. Has some difficulty with the cohesive factors in discourse, such as matching pronouns with referents. While texts do not differ significantly from those at the Advanced level, comprehension is less consistent. May have to read material several times for understanding.
+		Able to meet most practical writing needs and limited social demands. Can take notes in some detail on familiar topics and respond in writing to personal questions. Can write simple letters, brief synopses and paraphrases, summaries of biographical data, work and school experience. In those languages relying primarily on content words and time expressions to express time, tense, or aspect, some precision is displayed; where tense and/or aspect is expressed through verbal inflection, forms are produced rather consistently, but not always accurately. An ability to describe and narrate in paragraphs is emerging. Rarely uses basic cohesive elements such as pronominal substitutions or synonyms in written discourse. Writing, though faulty, is generally comprehensible to natives used to the writing of non-natives.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="aa" model="hc.vs.language.proficiency">						
+			<field name="code">AA</field>					
+			<field name="name">Advanced</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="a"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand main ideas and most details of connected discourse on a variety of topics beyond the immediacy of the situation. Comprehension may be uneven due to a variety of linguistic and extralinguistic factors, among which topic familiarity is very prominent. These texts frequently involve description and narration in different time frames or aspects, such as present, nonpast, habitual, or imperfective. Texts may include interviews, short lectures on familiar topics, and news items and reports primarily dealing with factual information. Listener is aware of cohesive devices but may not be able to use them to follow the sequence of thought in an oral text.
+		Able to satisfy the requirements of everyday situations and routine school and work requirements. Can handle with confidence but not with facility complicated tasks and social situations, such as elaborating, complaining, and apologizing. Can narrate and describe with some details, linking sentences together smoothly. Can communicate facts and talk casually about topics of current public and personal interest, using general vocabulary. Shortcomings can often be smoothed over by communicative strategies, such as pause fillers, stalling devices, and different rates of speech. Circumlocution which arises from vocabulary or syntactic limitations very often is quite successful, though some groping for words may still be evident. The Advanced-level speaker can be understood without difficulty by native interlocutors.
+		Able to read somewhat longer prose of several paragraphs in length, particularly if presented with a clear underlying structure. The prose is predominantly in familiar sentence patterns. Reader gets the main ideas and facts and misses some details. Comprehension derives not only from situational and subject matter knowledge but from increasing control of the language. Texts at this level include descriptions and narrations such as simple short stories, news items, bibliographical information, social notices, personal correspondence, routinized business letters, and simple technical material written for the general reader.
+		Able to write routine social correspondence and join sentences in simple discourse of at least several paragraphs in length on familiar topics. Can write simple social correspondence, take notes, write cohesive summaries and resumes, as well as narratives and descriptions of a factual nature. Has sufficient writing vocabulary to express self simply with some circumlocution. May still make errors in punctuation, spelling, or the formation of nonalphabetic symbols. Good control of the morphology and the most frequently used syntactic structures, e.g., common word order patterns, coordination, subordination, but makes frequent errors in producing complex sentences. Uses a limited number of cohesive devices, such as pronouns, accurately. Writing may resemble literal translations from the native language, but a sense of organization (rhetorical structure) is emerging. Writing is understandable to natives not used to the writing of non-natives.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="ap" model="hc.vs.language.proficiency">						
+			<field name="code">AP</field>					
+			<field name="name">Advanced Plus</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="a"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand the main ideas of most speech in a standard dialect; however, the listener may not be able to sustain comprehension in extended discourse which is propositionally and linguistically complex. Listener shows an emerging awareness of culturally implied meanings beyond the surface meanings of the text but may fail to grasp sociocultural nuances of the message.
+		Able to satisfy the requirements of a broad variety of everyday, school, and work situations. Can discuss concrete topics relating to particular interests and special fields of competence. There is emerging evidence of ability to support opinions, explain in detail, and hypothesize. The Advanced-Plus speaker often shows a well-developed ability to compensate for an imperfect grasp of some forms with confident use of communicative strategies, such as paraphrasing and circumlocution. Differentiated vocabulary and intonation are effectively used to communicate fine shades of meaning. The Advanced-Plus speaker often shows remarkable fluency and ease of speech, but under the demands of Superior-level complex tasks, language may break down or prove inadequate.
+		Able to follow essential points of written discourse at the Superior level in areas of special interest or knowledge. Able to understand parts of texts which are conceptually abstract and linguistically complex, and/or texts which treat unfamiliar topics and situations, as well as some texts which involve aspects of target-language culture. Able to comprehend the facts to make appropriate inferences. An emerging awareness of the aesthetic properties of language and of its literary styles permits comprehension of a wider variety of texts, including literary. Misunderstandings may occur.
+		Able to write about a variety of topics with significant precision and in detail. Can write most social and informal business correspondence. Can describe and narrate personal experiences fully but has difficulty supporting points of view in written discourse. Can write about the concrete aspects of topics relating to particular interests and special fields of competence. Often shows remarkable fluency and ease of expression, but under time constraints and pressure writing may be inaccurate. Generally strong in either grammar or vocabulary, but not in both. Weakness and unevenness in one of the foregoing or in spelling or character writing formation may result in occasional miscommunication. Some misuse of vocabulary may still be evident. Style may still be obviously foreign.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="ss" model="hc.vs.language.proficiency">						
+			<field name="code">SS</field>					
+			<field name="name">Superior</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand the main ideas of all speech in a standard dialect, including technical discussion in a field of specialization. Can follow the essentials of extended discourse which is propositionally and linguistically complex, as in academic/professional settings, in lectures, speeches, and reports. Listener shows some appreciation of aesthetic norms of target language, of idioms, colloquialisms, and register shifting. Able to make inferences within the cultural framework of the target language. Understanding is aided by an awareness of the underlying organizational structure of the oral text and includes sensitivity for its social and cultural references and its affective overtones. Rarely misunderstands but may not understand excessively rapid, highly colloquial speech or speech that has strong cultural references.
+		Able to speak the language with sufficient accuracy to participate effectively in most formal and informal conversations on practical, social, professional, and abstract topics. Can discuss special fields of competence and interest with ease. Can support opinions and hypothesize, but may not be able to tailor language to audience or discuss in depth highly abstract or unfamiliar topics. Usually the Superior level speaker is only partially familiar with regional or other dialectical variants. The Superior level speaker commands a wide variety of interactive strategies and shows good awareness of discourse strategies. The latter involves the ability to distinguish main ideas from supporting information through syntactic, lexical, and suprasegmental features (pitch, stress, intonation). Sporadic errors may occur, particularly in low-frequency structures and some complex high-frequency structures more common to formal writing, but no patterns of error are evident. Errors do not disturb the native speaker or interfere with communication.
+		Able to read with almost complete comprehension and at normal speed expository prose on unfamiliar subjects and a variety of literary texts. Reading ability is not dependent on subject matter knowledge, although the reader is not expected to comprehend thoroughly texts which are highly dependent on knowledge of the target culture. Reads easily for pleasure. Superior-level texts feature hypotheses, argumentation, and supported opinions, and include grammatical patterns and vocabulary ordinarily encountered in academic/professional reading.
+
+		At this level, due to the control of general vocabulary and structure, the reader is almost always able to match the meanings derived from extralinguistic knowledge with meanings derived from knowledge of the language, allowing for smooth and efficient reading of diverse texts. Occasional misunderstandings may still occur; for example, the reader may experience some difficulty with unusually complex structures and low-frequency idioms. At the Superior level the reader can match strategies, top-down or bottom-up, which are most appropriate to the text. (Top-down strategies rely on real-world knowledge and prediction based on genre and organizational scheme of the text. Bottom-up strategies rely on actual linguistic knowledge.) Material at this level will include a variety of literary texts, editorials, correspondence, general reports, and technical material in professional fields. Rereading is rarely necessary, and misreading is rare.
+		Able to express self effectively in most formal and informal writing on practical, social and professional topics. Can write most types of correspondence, such as memos as well as social and business letters, and short research papers and statements of position in areas of special interest or in special fields. Good control of a full range of structures, spelling or nonalphabetic symbol production, and a wide general vocabulary allow the writer to hypothesize and present arguments or points of view accurately and effectively. An underlying organization, such as chronological ordering, logical ordering, cause and effect, comparison, and thematic development is strongly evident, although not thoroughly executed and/or not totally reflecting target language patterns. Although sensitive to differences in formal and informal style, still may not tailor writing precisely to a variety of purposes and/or readers. Errors in writing rarely disturb natives or cause miscommunication.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="dd" model="hc.vs.language.proficiency">						
+			<field name="code">DD</field>					
+			<field name="name">Distinguished</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="d"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand all forms and styles of speech pertinent to personal, social, and professional needs tailored to different audiences. Shows strong sensitivity to social and cultural references and aesthetic norms by processing language from within the cultural framework. Texts include theater plays, screen productions, editorials, symposia, academic debates, public policy statements, literary readings, and most jokes and puns. May have difficulty with some dialects and slang.
+		Able to read fluently and accurately most styles and forms of the language pertinent to academic and professional needs. Able to relate inferences in the text to real-world knowledge and understand almost all sociolinguistic and cultural references by processing language from within the cultural framework. Able to understand a writer's use of nuance and subtlety. Can readily follow unpredictable turns of thought and author intent in such materials as sophisticated editorials, specialized journal articles, and literary texts such as novels, plays, poems, as well as in any subject matter area directed to the general reader.</field>					
+			<field name="source_id" ref="base.lang_prof_actfl"/>					
+			<field name="system">https://en.wikipedia.org/wiki/American_Council_on_the_Teaching_of_Foreign_Languages</field>					
+		</record>						
+		<record id="l" model="hc.vs.language.proficiency">						
+			<field name="code">L</field>					
+			<field name="name">Listening</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r" model="hc.vs.language.proficiency">						
+			<field name="code">R</field>					
+			<field name="name">Reading</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s" model="hc.vs.language.proficiency">						
+			<field name="code">S</field>					
+			<field name="name">Speaking</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w" model="hc.vs.language.proficiency">						
+			<field name="code">W</field>					
+			<field name="name">Writing</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref=""/>					
+			<field name="level">1</field>					
+			<field name="definition"></field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l0" model="hc.vs.language.proficiency">						
+			<field name="code">L0</field>					
+			<field name="name">Listening 0 (No Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">No practical understanding of the spoken language. Understanding is limited to occasional isolated words with essentially no ability to comprehend communication. (Has been coded L-0 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l0+" model="hc.vs.language.proficiency">						
+			<field name="code">L0+</field>					
+			<field name="name">Listening 0+ (Memorized Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand a number of memorized utterances in areas of immediate needs. Slight increase in utterance length understood, but requires frequent long pauses between understood phrases and repeated requests on the listener's part for repetition. Understands with reasonable accuracy only when this involves short memo-rized utterances or formulae. Utterances understood are relatively short in length. Misunderstandings arise due to ignoring or inaccurately hearing sounds or word endings (both inflectional and noninflectional), distorting the original meaning. Can understand only with difficulty even persons such as teachers who are used to speaking with non-native speakers. Can understand best those statements where context strongly supports the utterance's meaning. Gets some main ideas. (Has been coded L-0+ in some non-automated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l1" model="hc.vs.language.proficiency">						
+			<field name="code">L1</field>					
+			<field name="name">Listening 1 (Elementary Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand utterances about basic survival needs and minimum courtesy and travel requirements. In areas of immediate need or on very familiar topics, can understand simple questions and answers, simple statements, and very simple face-to-face conversations in a standard dialect. These must often be delivered more clearly than normal at a rate slower than normal, with frequent repetitions or paraphrase (that is, by a native used to dealing with foreigners). Once learned, these sentences can be varied for similar level vocabulary and grammar and still be understood. In the majority of utterances, misunderstandings arise due to overlooked or misunderstood syntax and other grammatical clues. Comprehension vocabulary inadequate to understand anything but the most elementary needs. Strong interference from the candidate's native language occurs. Little precision in the information understood owing to tentative state of passive grammar and lack of vocabulary. Comprehension areas include basic needs such as: meals, lodging, transportation, time, and simple directions (including both route instructions and orders form customs officials, policemen, etc.). Understands main ideas. (Has been coded L-1 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l1+" model="hc.vs.language.proficiency">						
+			<field name="code">L1+</field>					
+			<field name="name">Listening 1+ (Elementary Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand short conversations about all survival needs and limited social demands. Developing flexibility evident in understanding into a range of circumstances beyond immediate survival needs. Shows spontaneity in understanding by speed, although consistency of understanding uneven. Limited vocabulary range necessitates repetition for understanding. Understands more common time forms and most question forms, some word order patterns, but miscommunication still occurs with more complex patterns. Cannot sustain understanding of coherent structures in longer utterances or in unfamiliar situations. Understanding of descriptions and the giving of precise information is limited. Aware of basic cohesive features; e.g., pronouns, verb inflections, but many are unreliably understood, especially if less immediate in reference. Understanding is largely limited to a series of short, discrete utterances. Still has to ask for utterances to be repeated. Some ability to understand the facts. Has been coded L-1+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l2" model="hc.vs.language.proficiency">						
+			<field name="code">L2</field>					
+			<field name="name">Listening 2 (Limited Working Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand conversations on routine social demands and limited job requirements. Able to understand face-to-face speech in a standard dialect, delivered at a normal rate with some repetition and rewording, by a native speaker not used to dealing with foreigners, about everyday topics, common personal and family news, well-known current events, and routine office matters through descriptions and narration about current, past, and future events; can follow essential points of discussion or speech at an elementary level on topics in his/her special professional field. Only understands occasional words and phrases of statements made in unfavorable conditions; for example, through loudspeakers outdoors. Understands factual content. Native language causes less interference in listening comprehension. Able to understand facts; i.e., the lines but not between or beyond the lines. (Has been coded L-2 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l2+" model="hc.vs.language.proficiency">						
+			<field name="code">L2+</field>					
+			<field name="name">Listening 2+ (Limited Working Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand most routine social demands and most conversations on work requirements as well as some discussions on concrete topics related to particular interests and special fields of competence. Often shows remarkable ability and ease of understanding, but under tension or pressure may break down. Candidate may display weakness or deficiency due to inadequate vocabulary base or less than secure knowledge of grammar and syntax. Normally understands general vocabulary with some hesitant understanding of everyday vocabulary still evident. Can sometimes detect emotional overtones. Some ability to understand implications. (Has been coded L-2+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l3" model="hc.vs.language.proficiency">						
+			<field name="code">L3</field>					
+			<field name="name">Listening 3 (General Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand the essentials of all speech in a standard dialect including technical discussions within a special field. Has effective understanding of face-to-face speech, delivered with normal clarity and speed in a standard dialect, on general topics and areas of special interest; understands hypothesizing and supported opinions. Has broad enough vocabulary that rarely has to ask for paraphrasing or explanation. Can follow accurately the essentials of conversations between educated native speakers, reasonably clear telephone calls, radio broadcasts, news stories similar to wire service reports, oral reports, some oral technical reports and public addresses on non-technical subjects; can understand without difficulty all forms of standard speech concerning a special professional field. Does not understand native speakers if they speak very quickly or use some slang or dialect. Can often detect emotional overtones. Can understand implications. (Has been coded L-3 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l3+" model="hc.vs.language.proficiency">						
+			<field name="code">L3+</field>					
+			<field name="name">Listening 3+ (General Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Comprehends most of the content and intent of a variety of forms and styles of speech pertinent to professional needs, as well as general topics and social conversation. Ability to comprehend many sociolinguistic and cultural references. However, may miss some subtleties and nuances. Increased ability to comprehend unusually complex structures in lengthy utterances and to comprehend many distinctions in language tailored for different audiences. Increased ability to understand native speakers talking quickly, using nonstandard dialect or slang; however, comprehension not complete. Can discern some relationships among sophisticated listening materials in the context of broad experience. Can follow some unpredictable turns of thought readily in, for example, informal and formal speeches covering editorial, conjectural, and literary material in subject-matter areas directed to the general listener. (Has been coded L-3+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l4" model="hc.vs.language.proficiency">						
+			<field name="code">L4</field>					
+			<field name="name">Listening 4 (Advanced Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to understand all forms and styles of speech pertinent to professional needs. Able to understand fully all speech with extensive and precise vocabulary, subtleties and nuances in all standard dialects on any subject relevant to professional needs within the range of his/her experience, including social conversations; all intelligible broadcasts and telephone calls; and many kinds of technical discussions and discourse. Understands language specifically tailored (including persuasion, representation, counseling, and negotiating) to different audiences. Able to understand the essentials of speech in some non-standard dialects. Has difficulty in understanding extreme dialect and slang, also in understanding speech in unfavorable conditions; for example, through bad loudspeakers outdoors. Can discern relationships among sophisticated listening materials in the context of broad experience. Can follow unpredictable turns of thought readily in, for example, informal and formal speeches covering editorial, conjectural, and literary material in any subject matter directed to the general listener. (Has been coded L-4 in some non-automated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l4+" model="hc.vs.language.proficiency">						
+			<field name="code">L4+</field>					
+			<field name="name">Listening 4+ (Advanced Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Increased ability to understand extremely difficult and abstract speech as well as ability to understand all forms and styles of speech pertinent to professional needs, including social conversations. Increased ability to comprehend native speakers using extreme non-standard dialects and slang, as well as to understand speech in unfavorable conditions. Strong sensitivity to sociolinguistic and cultural references. Accuracy is close to that of the well-educated native listener but still not equivalent. (Has been coded L-4+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="l5" model="hc.vs.language.proficiency">						
+			<field name="code">L5</field>					
+			<field name="name">Listening 5 (Functionally Native Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="l"/>					
+			<field name="level">2</field>					
+			<field name="definition">Comprehension equivalent to that of the well-educated native listener. Able to understand fully all forms and styles of speech intelligible to the well-educated native listener, including a number of regional and illiterate dialects, highly colloquial speech, and conversations and discourse distorted by marked interference from other noise. Able to understand how natives think as they create discourse. Able to understand extremely difficult and abstract speech. (Has been coded L-5 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r0" model="hc.vs.language.proficiency">						
+			<field name="code">R0</field>					
+			<field name="name">Reading 0 (No Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">No practical ability to read the language. Consistently misunderstands or cannot comprehend at all. (Has been coded R-0 in some nonautomated applications.</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r0+" model="hc.vs.language.proficiency">						
+			<field name="code">R0+</field>					
+			<field name="name">Reading 0+ (Memorized Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can recognize all the letters in the printed version of an alphabetic system and high-frequency elements of a syllabary or a character system. Able to read some or all of the following: numbers, isolated words and phrases, personal and place names, street signs, office and shop designations; the above often interpreted inaccurately. Unable to read connected prose. (Has been coded R-0+ in some nonautomated applications.</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r1" model="hc.vs.language.proficiency">						
+			<field name="code">R1</field>					
+			<field name="name">Reading 1 (Elementary Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to read very simple connected written material in a form equivalent to usual printing or typescript. Can read either representations of familiar formulaic verbal exchanges or simple language containing only the highest frequency structural patterns and vocabulary, including shared international vocabulary items and cognates (when appropriate). Able to read and understand known language elements that have been recombined in new ways to achieve different meanings at a similar level of simplicity. Texts may include simple narratives of routine behavior; highly predictable descriptions of persons, places, or things; and explanations of geography and government such as those simplified for tourists. Some misunderstandings possible on simple texts. Can get some main ideas and locate prominent items of professional significance in more complex texts. Can identify general subject matter in some authentic texts. (Has been coded R-1 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r1+" model="hc.vs.language.proficiency">						
+			<field name="code">R1+</field>					
+			<field name="name">Reading 1+ (Elementary Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand simple discourse in printed form for informative social purposes. Can read material such as announcements of public events, simple prose containing biographical information or narration of events, and straightforward newspaper headlines. Can guess at unfamiliar vocabulary if highly contextualized, but with difficulty in unfamiliar contexts. Can get some main ideas and locate routine information of professional significance in more complex texts. Can follow essential points of written discussion at an elementary level on topics in his/her special professional field.
+
+		In commonly taught languages, the individual may not control the structure well. For example, basic grammatical relations are often misinterpreted, and temporal reference may rely primarily on lexical items as time indicators. Has some difficulty with the cohesive factors in discourse, such as matching pronouns with referents. May have to read materials several times for understanding. (Has been coded R-1+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r2" model="hc.vs.language.proficiency">						
+			<field name="code">R2</field>					
+			<field name="name">Reading 2 (Limited Working Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to read simple, authentic written material in a form equivalent to usual printing or typescript on subjects within a familiar context. Able to read with some misunderstandings straightforward, familiar, factual material, but in general insufficiently experienced with the language to draw inferences directly from the linguistic aspects of the text. Can locate and understand the main ideas and details in material written for the general reader. However, persons who have professional knowledge of a subject may be able to summarize or perform sorting and locating tasks with written texts that are well beyond their general proficiency level. The individual can read uncomplicated, but authentic, prose on familiar subjects that are normally presented in a predictable sequence which aids the reader in understanding. Texts may include descriptions and narrations in contexts such as news items describing frequently occurring events, simple biographical information, social notices, formulaic business letters, and simple technical material written for the general reader. Generally the prose that can be read by the individual is predominantly in straightforward/high-frequency sentence patterns. The individual does not have a broad active vocabulary (that is, which he/she recognizes immediately on sight), but is able to use contextual and real-world cues to understand the text. Characteristically, however, the individual is quite slow in performing such a process. He/she is typically able to answer factual questions about authentic texts of the types described above. (Has been coded R-2 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r2+" model="hc.vs.language.proficiency">						
+			<field name="code">R2+</field>					
+			<field name="name">Reading 2+ (Limited Working Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient comprehension to understand most factual material in non-technical prose as well as some discussions on concrete topics related to special professional interests. Is markedly more proficient at reading materials on a familiar topic. Is able to separate the main ideas and details from lesser ones and uses that distinction to advance understanding. The individual is able to use linguistic context and real-world knowledge to make sensible guesses about unfamiliar material. Has a broad active reading vocabulary. The individual is able to get the gist of main and subsidiary ideas in texts which could only be read thoroughly by persons with much higher proficiencies. Weaknesses include slowness, uncertainty, inability to discern nuance and/or intentionally disguised meaning. (Has been coded R-2+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r3" model="hc.vs.language.proficiency">						
+			<field name="code">R3</field>					
+			<field name="name">Reading 3 (General Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to read within a normal range of speed and with almost complete comprehension a variety of authentic prose material on unfamiliar subjects. Reading ability is not dependent on subject matter knowledge, although it is not expected that the individual can comprehend thoroughly subject matter which is highly dependent on cultural knowledge or which is outside his/her general experience and not accompanied by explanation. Text-types include news stories similar to wire service reports or international news items in major periodicals, routine correspondence, general reports, and technical material in his/her professional field; all of these may include hypothesis, argumentation, and supported opinions. Misreading rare. Almost always able to interpret material correctly, relate ideas, and "read between the lines," (that is, understand the writers' implicit intents in texts of the above types). Can get the gist of more sophisticated texts, but may be unable to detect or understand subtlety and nuance. Rarely has to pause over or reread general vocabulary. However, may experience some difficulty with unusually complex structure and low frequency idioms. (Has been coded R-3 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r3+" model="hc.vs.language.proficiency">						
+			<field name="code">R3+</field>					
+			<field name="name">Reading 3+ (General Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can comprehend a variety of styles and forms pertinent to professional needs. Rarely misinterprets such texts or rarely experiences difficulty relating ideas or making inferences. Able to comprehend many sociolinguistic and cultural references. However, may miss some nuances and subtleties. Able to comprehend a considerable range of intentionally complex structures, low-frequency idioms, and uncommon connotative intentions; however, accuracy is not complete. The individual is typically able to read with facility, understand, and appreciate contemporary expository, technical, or literary texts which do not rely heavily on slang and unusual idioms. (Has been coded R-3+ in some nonautomated applications.) [Data Code 36].</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r4" model="hc.vs.language.proficiency">						
+			<field name="code">R4</field>					
+			<field name="name">Reading 4 (Advanced Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to read fluently and accurately all styles and forms of the language pertinent to professional needs. The individual's experience with the written language is extensive enough that he/she is able to relate
+		inferences in the text to real-world knowledge and understand almost all sociolinguistic and cultural references. Able to ""read beyond the lines"" (that is, to understand the full ramifications of texts as they are situated in the wider cultural, political, or social environment). Able to read and understand the intent of writers' use of nuance and subtlety. The individual can discern relationships among sophisticated written materials in the context of broad experience. Can follow unpredictable turns of thoughts readily in, for example, editorials, conjectural, and literary texts in any subject matter area directed to the general reader. Can read essentially all materials in his/her special field, including official and professional documents and correspondence. Recognizes all professionally relevant vocabulary known to the educated non-professional native, although may have some difficulty with slang. Can read reasonably legible handwriting without difficulty. Accuracy is often nearly that of a well-educated native reader. (Has been coded R-4 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r4+" model="hc.vs.language.proficiency">						
+			<field name="code">R4+</field>					
+			<field name="name">Reading 4+ (Advanced Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Nearly native ability to read and understand extremely difficult or abstract prose, a very wide variety of vocabulary, idioms, colloquialisms, and slang. Strong sensitivity to and understanding of sociolinguistic and cultural references. Little difficulty in reading less than fully legible handwriting. Broad ability to "read beyond the lines" (that is, to understand the full ramifications of texts as they are situated in the wider cultural, political, or social environment) is nearly that of a well-read or well-educated native reader. Accuracy is close to that of the well-educated native reader, but not equivalent. (Has been coded R-4+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="r5" model="hc.vs.language.proficiency">						
+			<field name="code">R5</field>					
+			<field name="name">Reading 5 (Functionally Native Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="r"/>					
+			<field name="level">2</field>					
+			<field name="definition">Reading proficiency is functionally equivalent to that of the well-educated native reader. Can read extremely difficult and abstract prose; for example, general legal and technical as well as highly colloquial writings. Able to read literary texts, typically including contemporary avant-garde prose, poetry, and theatrical writing. Can read classical/archaic forms of literature with the same degree of facility as the well-educated, but non-specialist native. Reads and understands a wide variety of vocabulary and idioms, colloquialisms, slang, and pertinent cultural references. With varying degrees of difficulty, can read all kinds of handwritten documents. Accuracy of comprehension is equivalent to that of a well-educated native reader. (Has been coded R-5 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s0" model="hc.vs.language.proficiency">						
+			<field name="code">S0</field>					
+			<field name="name">Speaking 0 (No Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Unable to function in the spoken language. Oral production is limited to occasional isolated words. Has essentially no communicative ability. (Has been coded S-0 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s0+" model="hc.vs.language.proficiency">						
+			<field name="code">S0+</field>					
+			<field name="name">Speaking 0+ (Memorized Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to satisfy immediate needs using rehearsed utterances. Shows little real autonomy of expression, flexibility, or spontaneity. Can ask questions or make statements with reasonable accuracy only with memorized utterances or formulae. Attempts at creating speech are usually unsuccessful.
+
+		Examples: The individual's vocabulary is usually limited to areas of immediate survival needs. Most utterances are telegraphic; that is, functors (linking words, markers, and the like) are omitted, confused, or distorted. An individual can usually differentiate most significant sounds when produced in isolation, but, when combined in words or groups of words, errors may be frequent. Even with repetition, communication is severely limited even with people used to dealing with foreigners. Stress, intonation, tone, etc. are usually quite faulty. (Has been coded S-0+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s1" model="hc.vs.language.proficiency">						
+			<field name="code">S1</field>					
+			<field name="name">Speaking 1 (Elementary Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to satisfy minimum courtesy requirements and maintain very simple face-to-face conversations on familiar topics. A native speaker must often use slowed speech, repetition, paraphrase, or a combination of these to be understood by this individual. Similarly, the native speaker must strain and employ real-world knowledge to understand even simple statements/questions from this individual. This speaker has a functional, but limited proficiency. Misunderstandings are frequent, but the individual is able to ask for help and to verify comprehension of native speech in face-to-face interaction. The individual is unable to produce continuous discourse except with rehearsed material.
+
+		Examples: Structural accuracy is likely to be random or severely limited. Time concepts are vague. Vocabulary is inaccurate, and its range is very narrow. The individual often speaks with great difficulty. By repeating, such speakers can make themselves understood to native speakers who are in regular contact with foreigners, but there is little precision in the information conveyed. Needs, experience, or training may vary greatly from individual to individual; for example, speakers at this level may have encountered quite different vocabulary areas. However, the individual can typically satisfy predictable, simple, personal, and accommodation needs; can generally meet courtesy, introduction, and identification requirements; exchange greetings; elicit and provide, for example, predictable and skeletal biographical information. He/she might give information about business hours, explain routine procedures in a limited way, and state in a simple manner what actions will be taken. He/she is able to formulate some questions even in languages with complicated question constructions. Almost every utterance may be characterized by structural errors and errors in basic grammatical relations. Vocabulary is extremely limited and characteristically does not include modifiers. Pronunciation, stress, and intonation are generally poor, often heavily influenced by another language. Use of structure and vocabulary is highly imprecise. (Has been coded S-1 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s1+" model="hc.vs.language.proficiency">						
+			<field name="code">S1+</field>					
+			<field name="name">Speaking 1+ (Elementary Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Can initiate and maintain predictable face-to-face conversations and satisfy limited social demands. He/she may, however, have little understanding of the social conventions of conversation. The interlocutor is generally required to strain and employ real-world knowledge to understand even some simple speech. The speaker at this level may hesitate and may have to change subjects due to lack of language resources. Range and control of the language are limited. Speech largely consists of a series of short, discrete utterances.
+
+		Examples: The individual is able to satisfy most travel and accommodation needs and a limited range of social demands beyond exchange of skeletal biographic information. Speaking ability may extend beyond immediate survival needs. Accuracy in basic grammatical relations is evident, although not consistent. May exhibit the more common forms of verb tenses, for example, but may make frequent errors in formation and selection. While some structures are established, errors occur in more complex patterns. The individual typically cannot sustain coherent structures in longer utterances or unfamiliar situations. Ability to describe and give precise information is limited. Person, space, and time references are often used incorrectly. Pronunciation is understandable to natives used to dealing with foreigners. Can combine most significant sounds with reasonable comprehensibility, but has difficulty in producing certain sounds in certain positions or in certain combinations. Speech will usually be labored. Frequently has to repeat utterances to be understood by the general public. (Has been coded S-1+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s2" model="hc.vs.language.proficiency">						
+			<field name="code">S2</field>					
+			<field name="name">Speaking 2 (Limited Working Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to satisfy routine social demands and limited work requirements. Can handle routine work-related interactions that are limited in scope. In more complex and sophisticated work-related tasks, language usage generally disturbs the native speaker. Can handle with confidence, but not with facility, most normal, high-frequency social conversational situations including extensive, but casual conversations about current events, as well as work, family, and autobiographical information. The individual can get the gist of most everyday conversations but has some difficulty understanding native speakers in situations that require specialized or sophisticated knowledge. The individual's utterances are minimally cohesive. Linguistic structure is usually not very elaborate and not thoroughly controlled; errors are frequent. Vocabulary use is appropriate for high-frequency utterances, but unusual or imprecise elsewhere.
+
+		Examples: While these interactions will vary widely from individual to individual, the individual can typically ask and answer predictable questions in the workplace and give straightforward instructions to subordinates. Additionally, the individual can participate in personal and accommodation-type interactions with elaboration and facility; that is, can give and understand complicated, detailed, and extensive directions and make non-routine changes in travel and accommodation arrangements. Simple structures and basic grammatical relations are typically controlled; however, there are areas of weakness. In the commonly taught languages, these may be simple markings such as plurals, articles, linking words, and negatives or more complex structures such as tense/aspect usage, case morphology, passive constructions, word order, and embedding. (Has been coded S-2 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s2+" model="hc.vs.language.proficiency">						
+			<field name="code">S2+</field>					
+			<field name="name">Speaking 2+ (Limited Working Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to satisfy most work requirements with language usage that is often, but not always, acceptable and effective. The individual shows considerable ability to communicate effectively on topics relating to particular interests and special fields of competence. Often shows a high degree of fluency and ease of speech, yet when under tension or pressure, the ability to use the language effectively may deteriorate. Comprehension of normal native speech is typically nearly complete. The individual may miss cultural and local references and may require a native speaker to adjust to his/her limitations in some ways. Native speakers often perceive the individual's speech to contain awkward or inaccurate phrasing of ideas, mistaken time, space, and person references, or to be in some way inappropriate, if not strictly incorrect.
+
+		Examples: Typically the individual can participate in most social, formal, and informal interactions; but limitations either in range of contexts, types of tasks, or level of accuracy hinder effectiveness. The individual may be ill at ease with the use of the language either in social interaction or in speaking at length in professional contexts. He/she is generally strong in either structural precision or vocabulary, but not in both. Weakness or unevenness in one of the foregoing, or in pronunciation, occasionally results in miscommunication. Normally controls, but cannot always easily produce, general vocabulary. Discourse is often incohesive. (Has been coded S-2+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s3" model="hc.vs.language.proficiency">						
+			<field name="code">S3</field>					
+			<field name="name">Speaking 3 (General Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to speak the language with sufficient structural accuracy and vocabulary to participate effectively in most formal and informal conversations on practical, social, and professional topics. Nevertheless, the individual's limitations generally restrict the professional contexts of language use to matters of shared knowledge and/or international convention. Discourse is cohesive. The individual uses the language acceptably, but with some noticeable imperfections; yet, errors virtually never interfere with understanding and rarely disturb the native speaker. The individual can effectively combine structure and vocabulary to convey his/her meaning accurately. The individual speaks readily and fills pauses suitably. In face-to-face conversation with natives speaking the standard dialect at a normal rate of speech, comprehension is quite complete. Although cultural references, proverbs, and the implications of nuances and idiom may not be fully understood, the individual can easily repair the conversation. Pronunciation may be obviously foreign. Individual sounds are accurate; but stress, intonation, and pitch control may be faulty.  
+
+		Examples: Can typically discuss particular interests and special fields of competence with reasonable ease. Can use the language as part of normal professional duties such as answering objections, clarifying points, justifying decisions, understanding the essence of challenges, stating and defending policy, conducting meetings, delivering briefings, or other extended and elaborate informative monologues. Can reliably elicit information and informed opinion from native speakers. Structural inaccuracy is rarely the major cause of misunderstanding. Use of structural devices is flexible and elaborate. Without searching for words or phrases, the individual uses the language clearly and relatively naturally to elaborate concepts freely and make ideas easily understandable to native speakers. Errors occur in low-frequency and highly complex structures. (Has been coded S-3 in some nonautomated applications.) </field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s3+" model="hc.vs.language.proficiency">						
+			<field name="code">S3+</field>					
+			<field name="name">Speaking 3+ (General Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Is often able to use the language to satisfy professional needs in a wide range of sophisticated and demanding tasks. 
+
+		Examples: Despite obvious strengths, may exhibit some hesitancy, uncertainty, effort, or errors which limit range of language-use tasks that can be reliably performed. Typically there is particular strength in fluency and one or more, but not all, of the following: breadth of lexicon, including low- and medium-frequency items, especially socio-linguistic/cultural references and nuances of close synonyms; structural precision, with sophisticated features that are readily, accurately, and appropriately controlled (such as complex modification and embedding in Indo-European languages); discourse competence in a wide range of contexts and tasks, often matching a native speaker's strategic and organizational abilities and expectations. Occasional patterned errors occur in low- frequency and highly complex structures. (Has been coded S-3+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s4" model="hc.vs.language.proficiency">						
+			<field name="code">S4</field>					
+			<field name="name">Speaking 4 (Advanced Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to use the language fluently and accurately on all levels normally pertinent to professional needs. The individual's language usage and ability to function are fully successful. Organizes discourse well, using appropriate rhetorical speech devices, native cultural references, and understanding. Language ability only rarely hinders him/her in performing any task requiring language; yet, the individual would seldom be perceived as a native. Speaks effortlessly and smoothly and is able to use the language with a high degree of effectiveness, reliability, and precision for all representational purposes within the range of personal and professional experience and scope of responsibilities. Can serve as an informal interpreter in a range of unpredictable circumstances. Can perform extensive, sophisticated language tasks, encompassing most matters of interest to well-educated native speakers, including tasks which do not bear directly on a professional specialty.
+
+		Examples: Can discuss in detail concepts which are fundamentally different from those of the target culture and make those concepts clear and accessible to the native speaker. Similarly, the individual can understand the details and ramifications of concepts that are culturally or conceptually different from his/her own. Can set the tone of interpersonal official, semi-official, and non-professional verbal exchanges with a representative range of native speakers (in a range of varied audiences, purposes, tasks, and settings). Can play an effective role among native speakers in such contexts as conferences, lectures, and debates on matters of disagreement. Can advocate a position at length, both formally and in chance encounters, using sophisticated verbal strategies. Understands and reliably produces shifts of both subject matter and tone. Can understand native speakers of the standard and other major dialects in essentially any face-to-face interaction. (Has been coded S-4 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s4+" model="hc.vs.language.proficiency">						
+			<field name="code">S4+</field>					
+			<field name="name">Speaking 4+ (Advanced Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Speaking proficiency is regularly superior in all respects, usually equivalent to that of a well-educated, highly articulate native speaker. Language ability does not impede the performance of any language-use task. However, the individual would not necessarily be perceived as culturally native.
+
+		Examples: The individual organizes discourse well, employing functional rhetorical speech devices, native cultural references, and understanding. Effectively applies a native speaker's social and circumstantial knowledge. However, cannot sustain that performance under all circumstances. While the individual has a wide range and control of structure, an occasional non-native slip may occur. The individual has a sophisticated control of vocabulary and phrasing that is rarely imprecise, yet there are occasional weaknesses in idioms, colloquialisms, pronunciation, cultural reference, or there may be an occasional failure to interact in a totally native manner. (Has been coded S-4+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="s5" model="hc.vs.language.proficiency">						
+			<field name="code">S5</field>					
+			<field name="name">Speaking 5 (Functionally Native Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="s"/>					
+			<field name="level">2</field>					
+			<field name="definition">Speaking proficiency is functionally equivalent to that of a highly articulate well-educated native speaker and reflects the cultural standards of the country where the language is natively spoken. The individual uses the language with complete flexibility and intuition, so that speech on all levels is fully accepted by well-educated native speakers in all of its features, including breadth of vocabulary and idiom, colloquialisms, and pertinent cultural references. Pronunciation is typically consistent with that of well-educated native speakers of a non-stigmatized dialect. (Has been coded S-5 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w0" model="hc.vs.language.proficiency">						
+			<field name="code">W0</field>					
+			<field name="name">Writing 0 (No Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">No functional writing ability. (Has been coded W-0 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w0+" model="hc.vs.language.proficiency">						
+			<field name="code">W0+</field>					
+			<field name="name">Writing 0+ (Memorized Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Writes using memorized material and set expressions. Can produce symbols in an alphabetic or syllabic writing system or 50 of the most common characters. Can write numbers and dates, own name, nationality, address, etc., such as on a hotel registration form. Otherwise, ability to write is limited to simple lists of common items such as a few short sentences.  Spelling and even representation of symbols (letters, syllables, characters) may be incorrect. (Has been coded W-0+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w1" model="hc.vs.language.proficiency">						
+			<field name="code">W1</field>					
+			<field name="name">Writing 1 (Elementary Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Has sufficient control of the writing system to meet limited practical needs. Can create by writing statements and questions on topics very familiar to him/her within the scope of his/her very limited language experience. Writing vocabulary is inadequate to express anything but elementary needs; writes in simple sentences making continual errors in spelling, grammar, and punctuation, but writing can be read and understood by a native reader used to dealing with foreigners attempting to write his/her language. Writing tends to be a loose collection of sentences (or fragments) on a given topic and provides little evidence of conscious organization. While topics which are "very familiar" and elementary needs vary considerably from individual to individual, any person at this level should be able to write simple phone messages, excuses, notes to service people, and simple notes to friends. (800-1000 characters controlled.) (Has been coded W-1 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w1+" model="hc.vs.language.proficiency">						
+			<field name="code">W1+</field>					
+			<field name="name">Writing 1+ (Elementary Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Sufficient control of writing system to meet most survival needs and limited social demands. Can create sentences and short paragraphs related to most survival needs (food, lodging, transportation, immediate surroundings and situations) and limited social demands. Can express fairly accurate present and future time. Can produce some past verb forms but not always accurately or with correct usage. Can relate personal history, discuss topics such as daily life, preferences, and very familiar material. Shows good control of elementary vocabulary and some control of basic syntactic patterns, but major errors still occur when expressing more complex thoughts. Dictionary usage may still yield incorrect vocabulary or forms, although the individual can use a dictionary to advantage to express simple ideas. Generally cannot use basic cohesive elements of discourse to advantage (such as relative constructions, object pronouns, connectors, etc.). Can take notes in some detail on familiar topics, and respond to personal questions using elementary vocabulary and common structures. Can write simple letters, summaries of biographical data and work experience with fair accuracy. Writing, though faulty, is comprehensible to native speakers used to dealing with foreigners. (Has been coded W-1+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w2" model="hc.vs.language.proficiency">						
+			<field name="code">W2</field>					
+			<field name="name">Writing 2 (Limited Working Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to write routine social correspondence and prepare documentary materials required for most limited work requirements. Has writing vocabulary sufficient to express himself/herself simply with some
+		circumlocutions. Can write simply about a very limited number of current events or daily situations. Still makes common errors in spelling and punctuation but shows some control of the most common formats and punctuation conventions. Good control of morphology of language (in inflected languages) and of the most frequently used syntactic structures. Elementary constructions are usually handled quite accurately and writing is understandable to a native reader not used to reading the writing of foreigners. Uses a limited number of cohesive devices. (Has been coded W-2 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w2+" model="hc.vs.language.proficiency">						
+			<field name="code">W2+</field>					
+			<field name="name">Writing 2+ (Limited Working Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Shows ability to write with some precision and in some detail about most common topics. Can write about concrete topics relating to particular interests and special fields of competence. Often shows surprising fluency and ease of expression, but under time constraints and pressure language may be inaccurate and/or incomprehensible. Generally strong in either grammar or vocabulary but not in both. Weaknesses or unevenness in one of the foregoing or in spelling result in occasional miscommunication. Areas of weakness range from simple constructions such as plurals, articles, prepositions, and negatives to more complex structures such as tense usage, passive constructions, word order, and relative clauses. Normally controls general vocabulary with some misuse of everyday vocabulary evident. Shows a limited ability to use circumlocutions. Uses dictionary to advantage to supply unknown words. Can take fairly accurate notes on material presented orally and handle with fair accuracy most social correspondence. Writing is under-standable to native speakers not used to dealing with foreigners' attempts to write the language, though style is still obviously foreign. (Has been coded W-2+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w3" model="hc.vs.language.proficiency">						
+			<field name="code">W3</field>					
+			<field name="name">Writing 3 (General Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to use the language effectively in most formal and informal written exchanges on practical, social, and professional topics. Can write reports, summaries, short library research papers on current events, on particular areas of interest, or on special fields with reasonable ease. Control of structure, spelling, and general vocabulary is adequate to convey his/her message accurately, but style may be obviously foreign. Errors virtually never interfere with comprehension and rarely disturb the native reader. Punctuation generally controlled. Employs a full range of structures. Control of grammar good with only sporadic errors in basic structures, occasional errors in the most complex frequent structures, and somewhat more frequent errors in low-frequency complex structures. Consistent control of compound and complex sentences. Relationship of ideas is consistently clear. (Has been coded W-4 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w3+" model="hc.vs.language.proficiency">						
+			<field name="code">W3+</field>					
+			<field name="name">Writing 3+ (General Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to write the language in a few prose styles pertinent to professional/educational needs. Not always able to tailor language to suit audience. Weaknesses may lie in poor control of low-frequency complex structures, vocabulary, or the ability to express subtleties and nuances. May be able to write on some topics pertinent to professional/ educational needs. Organization may suffer due to lack of variety in organizational patterns or in variety of cohesive devices. (Has been coded W-3+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w4" model="hc.vs.language.proficiency">						
+			<field name="code">W4</field>					
+			<field name="name">Writing 4 (Advanced Professional Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to write the language precisely and accurately in a variety of prose styles pertinent to professional educational needs. Errors of grammar are rare, including those in low-frequency complex structures. Consistently able to tailor language to suit audience and able to express subtleties and nuances. Expository prose is clearly, consistently, and explicitly organized. The writer employs a variety of organizational patterns, uses a wide variety of cohesive devices such as ellipsis and parallelisms, and subordinates in a variety of ways. Able to write on all topics normally pertinent to professional/educational needs and on social issues of a general nature. Writing adequate to express all his/her experiences. (Has been coded W-4 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w4+" model="hc.vs.language.proficiency">						
+			<field name="code">W4+</field>					
+			<field name="name">Writing 4+ (Advanced Professional Proficiency, Plus)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Able to write the language precisely and accurately in a wide variety of prose styles pertinent to professional/educational needs. May have some ability to edit but not in the full range of styles. Has some flexibility within a style and shows some evidence of a use of stylistic devices. (Has been coded W-4+ in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+		<record id="w5" model="hc.vs.language.proficiency">						
+			<field name="code">W5</field>					
+			<field name="name">Writing 5 (Functionally Native Proficiency)</field>					
+			<field name="is_abstract"></field>					
+			<field name="parent_id" ref="w"/>					
+			<field name="level">2</field>					
+			<field name="definition">Has writing proficiency equal to that of a well-educated native. Without non-native errors of structure, spelling, style, or vocabulary can write and edit both formal and informal correspondence, official reports and documents, and professional/educational articles including writing for special purposes which might include legal, technical, educational, literary, and colloquial writing. In addition to being clear, explicit, and informative, the writing and the ideas are also imaginative. The writer employs a very wide range of stylistic devices. (Has been coded W-5 in some nonautomated applications.)</field>					
+			<field name="source_id" ref="base.lang_prof_dlpt"/>					
+			<field name="system">https://en.wikipedia.org/wiki/Defense_Language_Proficiency_Tests</field>					
+		</record>						
+    </data>
+</odoo>

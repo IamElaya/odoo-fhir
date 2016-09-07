@@ -27,8 +27,8 @@
                 <field name="translatable" invisible="1" position="replace"/>
                 <field name="active" invisible="1" position="replace"/>
                 <field name="iso_code" position="after">
-                    <field name="iso3_code"/>
-                    <field name="language"/>
+                    <field name="iso3_code_id"/>
+                    <field name="language_id"/>
                     <field name="country_id"/>
                 </field>            
             </field>                    
@@ -39,15 +39,187 @@
             <field name="model">res.lang</field>            
             <field name="inherit_id" ref="base.res_lang_form"/>           
             <field name="arch" type="xml">
-                <field name="iso_code" position="after"> 
-                    <field name="iso3_code"/>
-                    <field name="language" />
+                <field name="iso_code" widget="selection" position="after"> 
+                    <field name="iso3_code_id" widget="selection"/>
+                    <field name="language_id" />
                     <field name="country_id"/>
                 </field>
             </field>                    
-        </record>   
+        </record>
+
+        <!-- Language Proficiency Views -->                      
+<!--         <record id="hc_vs_language_proficiency_view_search" model="ir.ui.view">          
+            <field name="name">Language Proficiency Search</field>                    
+            <field name="model">hc.vs.language.proficiency</field>                   
+            <field name="arch" type="xml">                  
+                <search string="Language Proficiency">               
+                    <field name="name" string="Language Proficiency Name"/>            
+                    <field name="code"/>
+                    <field name="is_abstract"/>                                
+                    <field name="level"/>
+                    <field name="parent_id"/>               
+                    <field name="definition"/>                
+                    <field name="source_id"/>                  
+                    <field name="system"/>            
+                </search>  
+                <group>
+                    <filter name="group_by_source" string="Source" context="{'group_by':'source_id'}"/>
+                    <filter name="group_by_parent" string="Parent" context="{'group_by':'parent_id'}"/>
+                </group>             
+            </field>                    
+        </record>   -->                     
+        
+        <record id="hc_vs_language_proficiency_view_tree" model="ir.ui.view">
+            <field name="name">Language Proficiency Tree</field>                  
+            <field name="model">hc.vs.language.proficiency</field>                   
+            <field name="arch" type="xml">                  
+                <tree string="Language Proficiency">                
+                    <field name="name" string="Language Proficiency Name"/>            
+                    <field name="code"/>
+                    <field name="is_abstract"/>                                  
+                    <field name="level"/>
+                    <field name="parent_id"/>                
+                    <field name="definition"/>                
+                    <field name="source_id"/>                  
+                    <field name="system"/>                
+                </tree>             
+            </field>                    
+        </record>                       
+        
+        <record id="hc_vs_language_proficiency_view_form" model="ir.ui.view">
+            <field name="name">Language Proficiency Form</field>                  
+            <field name="model">hc.vs.language.proficiency</field>                   
+            <field name="arch" type="xml">                  
+                <form string="Language Proficiency">             
+                    <sheet>         
+                        <div class="oe_title oe_left">      
+                            <h1>    
+                                <field name="name" default_focus="1" placeholder="Language Proficiency"/>
+                            </h1>   
+                        </div>      
+                        <group>     
+                            <group> 
+                                <field name="code"/>
+                                <field name="is_abstract"/>            
+                                <field name="level"/>
+                                <field name="parent_id"/>                
+                                <field name="definition"/>                
+                                <field name="source_id"/>                  
+                                <field name="system"/>     
+                            </group>      
+                        </group>        
+                    </sheet>            
+                </form>             
+            </field>                    
+        </record>
+
+        <!-- Language Skill Views -->                      
+                        
+<!--         <record id="hc_vs_language_skill_view_search" model="ir.ui.view">
+            <field name="name">Language Skill Search</field>                    
+            <field name="model">hc.vs.language.skill</field>                   
+            <field name="arch" type="xml">                  
+                <search string="Language Skill">               
+                    <field name="name" string="Language Skill Name"/>            
+                    <field name="code"/>
+                    <field name="is_abstract"/>                                
+                    <field name="level"/>               
+                    <field name="definition"/>
+                    <field name="parent_id"/>                
+                    <field name="source_id"/>                  
+                    <field name="system"/>            
+                </search>
+                <group>
+                    <filter name="group_by_source" string="Source" context="{'group_by':'source_id'}"/>
+                    <filter name="group_by_parent" string="Parent" context="{'group_by':'parent_id'}"/>
+                </group>                
+            </field>                    
+        </record>    -->                    
+        
+        <record id="hc_vs_language_skill_view_tree" model="ir.ui.view">
+            <field name="name">Language Skill Tree</field>                  
+            <field name="model">hc.vs.language.skill</field>                   
+            <field name="arch" type="xml">                  
+                <tree string="Language Skill">                
+                    <field name="name" string="Language Skill Name"/>            
+                    <field name="code"/>
+                    <field name="is_abstract"/>                                  
+                    <field name="level"/>               
+                    <field name="definition"/>                
+                    <field name="source_id"/>                  
+                    <field name="system"/>                
+                </tree>             
+            </field>                    
+        </record>                       
+        
+        <record id="hc_vs_language_skill_view_form" model="ir.ui.view">
+            <field name="name">Language Skill Form</field>                  
+            <field name="model">hc.vs.language.skill</field>                   
+            <field name="arch" type="xml">                  
+                <form string="Language Skill">             
+                    <sheet>         
+                        <div class="oe_title oe_left">      
+                            <h1>    
+                                <field name="name" default_focus="1" placeholder="Language Skill"/>
+                            </h1>   
+                        </div>      
+                        <group>     
+                            <group> 
+                                <field name="code"/>
+                                <field name="is_abstract"/>                       
+                                <field name="level"/>               
+                                <field name="definition"/>                
+                                <field name="source_id"/>                  
+                                <field name="system"/>     
+                            </group>      
+                        </group>        
+                    </sheet>            
+                </form>             
+            </field>                    
+        </record>
+
+        <record id="hc_vs_language_skill_view_tree" model="ir.ui.view">
+            <field name="name">Language Skill Tree</field>                  
+            <field name="model">hc.vs.language.skill</field>                   
+            <field name="arch" type="xml">                  
+                <tree string="Language Skill">                
+                    <field name="name" string="Language Skill Name"/>            
+                    <field name="code"/>
+                    <field name="is_abstract"/>                                  
+                    <field name="level"/>               
+                    <field name="definition"/>                
+                    <field name="source_id"/>                  
+                    <field name="system"/>                
+                </tree>             
+            </field>                    
+        </record> 
+
+        <!-- Language iso3 code -->
+        <record id="hc_vs_language_iso3_code_view_form" model="ir.ui.view">
+            <field name="name">Language ISO3 Code</field>                  
+            <field name="model">hc.vs.language.iso3.code</field>                   
+            <field name="arch" type="xml">                  
+                <form string="Language ISO3 Code">             
+                    <sheet>         
+                        <div class="oe_title oe_left">      
+                            <h1>    
+                                <field name="iso3_code_id" default_focus="1" placeholder="Language Skill"/>
+                            </h1>   
+                        </div>
+                        <group>
+                            <group>
+                                <field name="language_id"/> 
+                                <field name="iso3_code_id"/>  
+                            </group>      
+                        </group>        
+                    </sheet>            
+                </form>             
+            </field>                    
+        </record>
+
+
                                               
-<!-- Language Action and Menu -->           
+        <!-- Language Action and Menu -->           
                     
         <record id="hc_language_action" model="ir.actions.act_window">            
             <field name="name">HC Language</field>         
@@ -57,12 +229,60 @@
             <field name="view_mode">tree,form</field>         
         </record>
 
+        <record id="hc_vs_language_proficiency_action" model="ir.actions.act_window">
+            <field name="name">HC Language Proficiency</field>         
+            <field name="type">ir.actions.act_window</field>          
+            <field name="res_model">hc.vs.language.proficiency</field>         
+            <field name="view_type">form</field>          
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'group_by': 'source_id'}</field>      
+        </record>
+
+        <record id="hc_vs_language_skill_action" model="ir.actions.act_window">            
+            <field name="name">HC Language Skill</field>         
+            <field name="type">ir.actions.act_window</field>          
+            <field name="res_model">hc.vs.language.skill</field>         
+            <field name="view_type">form</field>          
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'group_by': 'source_id'}</field>        
+        </record>
+
+        <record id="hc_vs_language_iso3_code_action" model="ir.actions.act_window">            
+            <field name="name">HC Language Iso3 Code</field>         
+            <field name="type">ir.actions.act_window</field>          
+            <field name="res_model">hc.vs.language.iso3.code</field>         
+            <field name="view_type">form</field>          
+            <field name="view_mode">tree,form</field>      
+        </record>
+
         <menuitem id="hc_base.menu_language" 
-                  name="Languages" 
+                  name="Language" 
                   parent="hc_base.menu_datatype" 
+                  sequence="40"/>
+        <menuitem id="hc_base.menu_language_language" 
+                  name="Languages" 
+                  parent="hc_base.menu_language" 
                   action="hc_language_action" 
                   groups="hc_base.group_hc_base_manager" 
-                  sequence="55"/>
+                  sequence="10"/>
+        <menuitem id="hc_base.menu_language_proficiency" 
+                  name="Language Proficiencies" 
+                  parent="hc_base.menu_language" 
+                  action="hc_vs_language_proficiency_action" 
+                  groups="hc_base.group_hc_base_manager" 
+                  sequence="20"/>
+        <menuitem id="hc_base.menu_language_skill" 
+                  name="Language Skills" 
+                  parent="hc_base.menu_language" 
+                  action="hc_vs_language_skill_action" 
+                  groups="hc_base.group_hc_base_manager" 
+                  sequence="30"/>
+        <menuitem id="hc_base.menu_language_iso3_code" 
+                  name="Language ISO3 Code" 
+                  parent="hc_base.menu_language" 
+                  action="hc_vs_language_iso3_code_action" 
+                  groups="hc_base.group_hc_base_manager" 
+                  sequence="40"/>
 
     </data>
 </openerp>

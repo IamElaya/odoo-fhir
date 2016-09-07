@@ -20,6 +20,54 @@
             <field name="country_id" ref="base.us"/>
         </record>
 
+        <record id="base.lang_prof_ilr" model="res.partner">  
+            <field name="name">ILR</field>
+            <field name="company_type">company</field>
+            <field name="website">www.census.gov</field>
+            <field name="category_id" eval="[(6, 0, [ref('hc_base.partner_source'), ref('hc_base.partner_organization')])]"/>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
+        <record id="base.lang_prof_cefr" model="res.partner">  
+            <field name="name">CEFR</field>
+            <field name="company_type">company</field>
+            <field name="website">www.census.gov</field>
+            <field name="category_id" eval="[(6, 0, [ref('hc_base.partner_source'), ref('hc_base.partner_organization')])]"/>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
+        <record id="base.lang_prof_actfl" model="res.partner">  
+            <field name="name">ACTFL</field>
+            <field name="company_type">company</field>
+            <field name="website">www.census.gov</field>
+            <field name="category_id" eval="[(6, 0, [ref('hc_base.partner_source'), ref('hc_base.partner_organization')])]"/>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
+        <record id="base.lang_prof_dlpt" model="res.partner">  
+            <field name="name">DLPT</field>
+            <field name="company_type">company</field>
+            <field name="website">www.census.gov</field>
+            <field name="category_id" eval="[(6, 0, [ref('hc_base.partner_source'), ref('hc_base.partner_organization')])]"/>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
+        <record id="base.lang_prof_dlpt" model="res.partner">  
+            <field name="name">DLPT</field>
+            <field name="company_type">company</field>
+            <field name="website">www.census.gov</field>
+            <field name="category_id" eval="[(6, 0, [ref('hc_base.partner_source'), ref('hc_base.partner_organization')])]"/>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
+        <record id="base.lang_skill" model="res.partner">  
+            <field name="name">Basic</field>
+            <field name="company_type">company</field>
+            <field name="website">www.census.gov</field>
+            <field name="category_id" eval="[(6, 0, [ref('hc_base.partner_source'), ref('hc_base.partner_organization')])]"/>
+            <field name="country_id" ref="base.us"/>
+        </record>
+
         <record id="base.snomed" model="res.partner">  
             <field name="name">SNOMED CT</field>
             <field name="company_type">company</field>
